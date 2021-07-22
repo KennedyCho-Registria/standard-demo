@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+$font-main: 'Roboto', sans-serif;
+
+
+h1, h2, h3, li, a{
+    font-family: $font-main;
+    text-transform: uppercase;
+    color: $primary;
+    font-weight: 700 !important;
+}
+
+h4, h5, .h6, h6, button, label {
+  font-family: $font-main;
+  color: $secondary;
+}
+
+p, a, input, select, th, td, dt, dd, .form-control, body, .section-header{
+  font-family: $font-main;
+  // text-transform: uppercase;
+  color: $info;
+}
+
+.oc-container {
+  display: flex;
+  justify-content: center;
+}
+
+.oc-content {
+  // display: flex;
+  // justify-content: center;
+}

@@ -1,0 +1,213 @@
+// TYPOGRAPHY SIZE AND LINE HEIGHT
+
+h1, .h1 {
+	font-size: $h1-font-size;
+	line-height: $font-h1-line-height;
+}
+
+h2, .h2 {
+	font-size: $h2-font-size;
+	line-height: $font-h2-line-height;
+}
+
+h3, .h3 {
+	font-size: $h3-font-size;
+	line-height: $font-h3-line-height;
+}
+
+h4, .h4 {
+	font-size: $h4-font-size;
+	line-height: $font-h4-line-height;
+}
+
+h5, .h5 {
+	font-size: $h5-font-size;
+	line-height: $font-h5-line-height;
+}
+
+h6, .h6 {
+	font-size: $h6-font-size;
+	line-height: $font-h6-line-height;
+}
+
+p, .p, a {
+	font-size: $font-size-sm;
+}
+
+a.link-box{
+	text-decoration: none;
+}
+
+label {
+	font-size: $font-size-sm;
+	color: $dark;
+	padding-bottom: $spacer-2;
+}
+
+.clickable{
+	cursor: pointer;
+}
+
+.text-primary {
+	@if $light-theme {
+		color: $text-dark !important;
+
+		&:hover{
+			text-decoration-color: $text-dark !important;
+		}
+	} @else {
+		color: $primary;
+	}
+}
+
+.text-registria-primary {
+		color: $registria-primary;
+}
+
+.text-registria-secondary {
+		color: $registria-secondary;
+}
+
+.fine-print{
+	font-size: $font-size-xs;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+.aura-page-headers{
+	text-align: center;
+	// margin-bottom: $spacer-12;
+
+	.page-header{
+		color: $primary;
+		// padding: 0;
+		text-align: center;
+		// font-weight: $font-weight-light;
+		// width: 100vw;
+		// font-size: 5vw;
+		// left: 50%;
+		// transform: translate(-50%, -50%);
+		
+	}
+
+	.page-subheader{
+		color: $primary;
+		// font-weight: $font-weight-light;
+		// text-align: center;
+		// font-size: 3vw;
+		// margin-bottom: 0;
+		// line-height: 1.5rem;
+		// position: absolute;
+		// top: 70%;
+		// left: 50%;
+		// width: 80vw;
+		// transform: translate(-50%, -50%);
+
+
+	}
+
+	.page-desc{
+		text-align: center;
+		padding-top: $spacer-8;
+		font-size: $font-size-sm;
+	}
+}
+
+.merchandise-header{
+	@extend .page-header;
+}
+
+.merchandise-subheader{
+	@extend .page-subheader;
+}
+
+.section-header{
+	color: $dark;
+	margin-bottom: $spacer-12;
+	padding-bottom: $spacer-2;
+	padding-top: $spacer-4;
+	font-weight: $font-weight-normal;
+	border-bottom: 1px solid $lighter;
+	text-transform: uppercase;
+	font-size: $h4-font-size;
+	//font-size: $font-size-base;
+}
+
+.section-header-centered{
+	text-align: center;
+	color: $dark;
+	font-weight: $font-weight-normal;
+	font-size: $font-size-lg;
+
+	+ p{
+		text-align: center;
+		color: $dark;
+		font-weight: $font-weight-light;
+	}
+}
+
+.header-thanks{
+	color: $dark;
+	font-size: $font-size-xl;
+	margin-top: $spacer-12;
+}
+
+.header-confirmation-email{
+	color:  text-color-light;
+}
+
+.header-thanks-details{
+	border: 1px solid $lighter;
+	border-radius: 8px;
+	padding: $spacer-8;
+	font-size: $font-size-sm;
+	min-width: 80%;
+
+	dl{
+		margin-bottom: 5px;
+		line-height: 1rem;
+	}
+
+	dd{
+		margin-bottom: 0;
+	}
+}
+
+.checkbox-opt-in-text{
+	line-height: $font-h6-line-height;
+}
+
+.btn {
+	font-size: 1rem !important;
+	text-transform: uppercase;
+}
+
+#banner{
+	width: 100vw;
+	height: auto;
+	// overflow: hidden;
+
+}
+
+.header-container{
+	overflow: hidden;
+	// min-height: 10vh;
+	height: 30vh;
+}
+
+.form_container{
+	padding-left: 10% !important;
+	padding-right: 10% !important;
+
+}
+
+.header-container{ 
+	background-image: url('https://d3d2px1in9aet5.cloudfront.net/system/images/images/6034/original/Haven-Banner.jpg?1624305061');
+	width: 100%;
+	min-height: 30vh;
+	max-height: 40vh;
+	height: auto;
+	padding-top:6%;
+	padding-left: 5%;
+	padding-right: 5%;
+}

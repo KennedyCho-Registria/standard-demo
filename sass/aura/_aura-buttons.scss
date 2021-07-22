@@ -1,0 +1,134 @@
+.btn {
+  &.btn-icon {
+    position: relative;
+
+    svg {
+      background-color: $transparent-dark-20;
+      width: 55px;
+      height: 100%;
+      top: 0;
+      padding: 12px;
+    }
+
+    &.btn-icon-right {
+      padding-right: 52px;
+      svg,
+      i {
+        right: 0;
+      }
+    }
+    &.btn-icon-left {
+      padding-left: 52px;
+      svg,
+      i {
+        left: 0;
+      }
+    }
+    &.btn-lg {
+      &.btn-icon-right {
+        padding-right: 70px;
+      }
+      &.btn-icon-left {
+        padding-left: 70px;
+      }
+      i,
+      svg {
+        padding: 13px 22px;
+      }
+    }
+
+    i {
+      background-color: $transparent-dark-20;
+      padding: 10px 13px;
+      position: absolute;
+      top: 0;
+      height: 100%;
+      font-style: initial;
+    }
+
+    &.btn-outline-light {
+      &:hover {
+        background-color: $faint;
+        border-color: $primary;
+        color: $light;
+      }
+
+      i {
+        background-color: $white;
+        border-left: 1px solid $light;
+        transition: $btn-transition;
+        color: $light;
+        @if $enable-rounded {
+          // Manually use the if/else instead of the mixin to account for iOS override
+          border-top-right-radius: $btn-border-radius-lg;
+          border-bottom-right-radius: $btn-border-radius-lg;
+        } @else {
+          // Otherwise undo the iOS default
+          border-radius: 0;
+        }
+        padding: 13px;
+
+        &:active {
+          background-color: $white;
+          border-left: 1px solid $primary;
+          border-radius: 0;
+        }
+      }
+      &:hover {
+        i {
+          background-color: $faint;
+          border-color: $primary;
+        }
+      }
+      &:focus {
+        i {
+          background-color: $white;
+          border-left: 1px solid $primary;
+        }
+      }
+    }
+  }
+}
+
+.submit-button {
+  margin-top: $spacer-24;
+  margin-bottom: $spacer-24;
+}
+
+.btn-link {
+  @if $light-theme {
+    color: $text-dark;
+  } @else {
+    color: $primary;
+  }
+
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+.close:focus {
+  outline: none;
+}
+
+@include media-breakpoint-down(sm) {
+  .btn-sm-block {
+    display: block;
+    width: 100%;
+  }
+}
+
+@if $light-theme {
+  .btn-outline-primary {
+    background-color: $primary;
+    color: $text-dark;
+
+    &:hover {
+      background-color: darken($primary, 5%);
+    }
+  }
+}
+// clicking card elements disabled
+h3, p, h1, i, .card-body{
+  pointer-events: none;
+}

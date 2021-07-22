@@ -1,0 +1,243 @@
+// Brand color variables
+
+$primary:                           #274690 ;
+$secondary:                    			#FF853A  ; /* tile sub text*/
+$tertiary:                          #FFFFFF;
+$warning:                        	  #000000;
+$success:                       	  #000000;
+$info:                          	  #455964 ;
+$registria-primary:                 #000000;
+$registria-secondary:               #000000;
+$danger:                     			  #000000;
+$service:                           #ebebeb; 
+$service-sec:                       #9c9c9c; 
+
+
+$font-family-sans-serif:            "Proxima Nova", "Georgia", "Helvetica Neue", "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace:             "Proxima Nova", "Georgia", Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:                  $font-family-sans-serif !default;
+
+// Grey
+
+$grey-50:                           #fafafa;
+$grey-100:                          #bbbbbb; /* Speaker Speaker Text Color */
+$grey-200:                          #eeeeee;
+$grey-300:                          #7f7f7f; /* Speaker Speaker Text Color */
+$grey-400:                          #bdbdbd;
+$grey-500:                          #9e9e9e;
+$grey-600:                          #757575;
+$grey-700:                          #333333; /* Speaker Speaker Text Color */
+$grey-800:                          #424242;
+$grey-900:                          #212121;
+
+// Blue Grey
+
+$blue-grey-25:										  #f7f9f9;
+$blue-grey-35:                      #eff2f3;
+$blue-grey-50:                      #eceff1;
+$blue-grey-100:                     #cfd8dc;
+$blue-grey-200:                     #b0bec5;
+$blue-grey-300:                     #90a4ae;
+$blue-grey-400:                     #78909c;
+$blue-grey-500:                     #607d8b;
+$blue-grey-600:                     #546e7a;
+$blue-grey-700:                     #455a64;
+$blue-grey-800:                     #37474f;
+$blue-grey-900:                     #263238;
+$blue-grey-1000:                    #11171a;
+
+// Speaker Speaker
+
+$ice-blue:                          #f0f8fa;
+$light-sky-blue:                    #d2ebef;
+$faded-blue:                        #56b2c3;
+$ugly-blue:                         #307b88;
+$dirty-blue:                        #358897;
+$pale-grey:                         #f3f5f7;
+$light-sky-grey:                    #dbe2e6;
+$cool-grey:                         #93a9b4;
+$slate:                             #455a64;
+$charcoal-grey:                     #324148;
+
+// Transparencies
+
+$transparent:                       rgba(0,0,0,0);
+$transparent-dark-10:               rgba(0,0,0,0.1);
+$transparent-dark-20:               rgba(0,0,0,0.2);
+$transparent-dark-30:               rgba(0,0,0,0.3);
+$transparent-dark-40:               rgba(0,0,0,0.4);
+$transparent-dark-50:               rgba(0,0,0,0.5);
+$transparent-dark-60:               rgba(0,0,0,0.6);
+$transparent-dark-70:               rgba(0,0,0,0.7);
+$transparent-dark-80:               rgba(0,0,0,0.8);
+$transparent-dark-90:               rgba(0,0,0,0.9);
+$transparent-light-10:              rgba(255,255,255,0.1);
+$transparent-light-20:              rgba(255,255,255,0.2);
+$transparent-light-30:              rgba(255,255,255,0.3);
+$transparent-light-40:              rgba(255,255,255,0.4);
+$transparent-light-50:              rgba(255,255,255,0.5);
+$transparent-light-60:              rgba(255,255,255,0.6);
+$transparent-light-70:              rgba(255,255,255,0.7);
+$transparent-light-80:              rgba(255,255,255,0.8);
+$transparent-light-90:              rgba(255,255,255,0.9);
+
+// DARK - LIGHT USED FOR TEXT COLORS
+$black:                             #000;
+$white:                             #FFF;
+
+// Speaker Speaker
+$darkest:														$charcoal-grey;
+$dark:                              $slate;
+$light:                             $cool-grey;
+$lighter:                           $light-sky-grey;
+$lightest:                          $pale-grey;
+$faint:                             $pale-grey;
+
+$theme-colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+  (
+    "primary":    									$primary,
+    "secondary":  									$secondary,
+    "registria-primary":    				$registria-primary,
+    "registria-secondary":  				$registria-secondary,
+    "success":    									$success,
+    "info":       									$info,
+    "warning":    									$warning,
+    "danger":     									$danger,
+    "light":      									$light,
+    "lighter":      								$lighter,
+    "lightest":      								$lightest,
+    "dark":       									$dark,
+    "white":                        $white
+  ),
+  $theme-colors
+);
+
+$yiq-contrasted-threshold:          200 !default;
+
+// Features
+
+$enable-rounded:                    true !default;
+
+  // Don't need to change these
+  $border-radius-base:              .25rem !default;
+  $border-radius:                   $border-radius-base;
+  $border-radius-lg:                $border-radius * 1.5;
+  $border-radius-sm:                $border-radius * 0.75;
+
+  // Change Border Radius Value Here ($border-radius, $border-radius-sm, $border-radius-lg)
+  $border-radius:                   $border-radius;
+
+$light-theme:                       false !default;
+
+// Frame
+
+$spacer-base:                       .125rem;
+$spacer:                            $spacer-base * 8 !default;
+$spacers: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge(
+  (
+    0: 0,
+    2: ($spacer-base * 2),
+    4: ($spacer-base * 4),
+    6: ($spacer-base * 6),
+    8: ($spacer-base * 8),
+    10: ($spacer-base * 10),
+    12: ($spacer-base * 12),
+    16: ($spacer-base * 16),
+    20: ($spacer-base * 20),
+    24: ($spacer-base * 24)
+  ),
+  $spacers
+);
+
+$spacer-2:                          $spacer-base * 2;  // .25rem
+$spacer-4:                          $spacer-base * 4;  // .5rem
+$spacer-6:                          $spacer-base * 6;  // .75rem
+$spacer-8:                          $spacer-base * 8;  // 1rem
+$spacer-10:                         $spacer-base * 10; // 1.25 rem
+$spacer-12:                         $spacer-base * 12; // 1.5rem
+$spacer-16:                         $spacer-base * 16; // 2rem
+$spacer-20:                         $spacer-base * 20; // 2.5rem
+$spacer-24:                         $spacer-base * 24; // 3rem
+
+$grid-gutter-width:                 $spacer-16 !default;
+
+$body-bg:                           #F1F4F5;
+
+$container-max-widths: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$container-max-widths: map-merge(
+  (
+    sm: 475px,
+    md: 650px,
+    lg: 825px,
+    xl: 900px
+  ),
+  $container-max-widths
+);
+
+
+$container-box-shadow:              0 1px 4px 0 $transparent-dark-40;
+
+$header-mast-height:                275px;
+$header-height:                     150px;
+$container-offset:                  -$header-mast-height + 50px;
+
+$content-container-width:           60%;
+$content-container-width-sm:        60%;
+
+$text-dark:							            $darkest;
+$text-light:							          $dark;
+
+// Typography
+
+$font-size-base:                    1rem !default; // Assumes the browser default, typically `16px`
+$font-size-xl:                      ($font-size-base * 1.5) !default;
+$font-size-lg:                      ($font-size-base * 1.25) !default;
+$font-size-sm:                      ($font-size-base * .875) !default;
+$font-size-xs:                      ($font-size-base * .75) !default;
+$h1-font-size:                      $font-size-base * 2 !default;
+$h2-font-size:                      $font-size-base * 1.75 !default;
+$h3-font-size:                      $font-size-base * 1.5 !default;
+$h4-font-size:                      $font-size-base * 1.25 !default;
+$h5-font-size:                      $font-size-base * 1.125 !default;
+$h6-font-size:                      $font-size-base !default;
+
+$font-line-height-base:                    1rem !default;
+$font-h1-line-height:                      $font-line-height-base * 3 !default;
+$font-h2-line-height:                      $font-line-height-base * 2.625 !default;
+$font-h3-line-height:                      $font-line-height-base * 2.25 !default;
+$font-h4-line-height:                      $font-line-height-base * 1.875 !default;
+$font-h5-line-height:                      $font-line-height-base * 1.688 !default;
+$font-h6-line-height:                      $font-line-height-base * 1.5 !default;
+
+
+// Steps
+
+$step-height:												50px;
+
+// Forms
+
+$form-group-margin-bottom:					0.65rem;
+$input-gradient:                    linear-gradient(to bottom, $blue-grey-35 0%,$faint 75%);
+$custom-select-indicator-color:     $dark !default;
+$custom-select-arrows:              url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right .75rem center/8px 10px;
+$checkbox-border-radius:            0.15rem;
+$input-border-radius:               $border-radius;
+
+// Content Box
+
+$content-box-border-radius:         $border-radius;
+
+// Offers
+
+$merchandise-offer-border-radius:   $border-radius;
+
+// Buttons
+
+$btn-border-radius:                 $border-radius;
+$btn-border-radius-lg:              $border-radius;
+$btn-border-radius-sm:              $border-radius;

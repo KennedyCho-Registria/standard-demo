@@ -1,0 +1,490 @@
+<html lang="en" id="aura">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="csrf-param" content="authenticity_token">
+    <meta name="csrf-token" content="wCdh4aHdEtIywI37/t1T8MfQwdhflM2/+Wm/MUVIXj9S9HtLFT0zgP9GyN3Z5e70VKgR1mZYap1UflCMIYddiw==">
+    <script src="../scripts/jquery.min.js"></script>
+    <script src="../scripts/jquery-ui.min.js"></script>
+    <script src="../scripts/jquery-ui-i18n.min.js"></script>
+    <script src="../scripts/client.min.js"></script>
+    <script src="../scripts/vendor.js"></script>
+    <script src="../scripts/quickstart.js"></script>
+    
+    <link rel="stylesheet" href="https://registria-templates.s3.amazonaws.com/Standard/27/styles/standard.css">
+    <link rel="stylesheet" href="../styles/standard.css">
+    <link rel="stylesheet" href="../styles/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    <title>Speaker Speaker Support</title>
+    <link rel="shortcut icon" href="img/favicon.png">
+  </head>
+  <body class="aura portal-page portal account-page sidebar-lg-show">
+      <script>
+          if ($.IPInfo.country_code === "CA") {
+              if (window.location.pathname == "/reg" || window.location.pathname == "/") {
+                  window.location = window.location.origin + "/en-ca" + window.location.search;
+              }
+          }
+
+          function isFutureDate(idate) {
+              var today = new Date().getTime(),
+                  idate = idate.split("/");
+              idate = new Date(idate[2], idate[1] - 1, idate[0]).getTime();
+              return today - idate < 0 ? true : false;
+          }
+      </script>
+      <div class="page-wrap">
+          <header class="aura-header">
+              <div class="aura-header-inner">
+                  <button class="navbar-toggler mobile-sidebar-toggler" type="button"><i class="fal fa-bars" aria-hidden="true"></i></button>
+                  <div class="brand-logo text-center p-8">
+                          <img
+                              src="https://demo.registriaqa.com/system/images/images/5882/original/Demo_Logos.png?1613544380"
+                              alt="Speaker Speaker"
+                              title="Speaker Speaker Logo"
+                              class="img-fluid"
+                          />
+                  </div>
+                  <div class="ml-auto d-flex">
+                      <nav id="language-menu-header" class="nav dropdown dropdown-language nav-wrap text-right drop-shadow">
+                          <a onclick="gtag('event', 'click-locales', {'event_category' : 'header', 'event_label' : 'View Locales', 'value' : 10});" class="btn btn-link btn-sm nav-dropdown clickable">
+                              <div class="d-flex flex-column flex-md-row align-items-center">
+                                  <span>
+                                      <img class="flag flag-us mr-md-4 ml-auto mr-auto" src="https://d1yy0skkp4ztxs.cloudfront.net/system/images/30753/original/us-flag-24x24-2.png?1573140360" />
+                                      <i class="ml-2 fa fa-caret-down d-md-none d-inline" aria-hidden="true"></i>
+                                  </span>
+                                  <span class="d-none d-md-inline">English (US)<i class="ml-2 fa fa-caret-down" aria-hidden="true"></i></span>
+                              </div>
+                          </a>
+                          <div class="dropdown-menu language-select py-0 animated fade-top">
+                              <div class="px-8 py-4 d-flex align-items-center bg-lightest text-muted">
+                                  <img class="flag flag-us mr-4" src="https://d1yy0skkp4ztxs.cloudfront.net/system/images/30753/original/us-flag-24x24-2.png?1573140360" /><span>United States</span>
+                              </div>
+                              <a class="dropdown-item menu-link py-8" href="/en/app">English (US)</a>
+                              <div class="px-8 py-4 d-flex align-items-center bg-lightest text-muted">
+                                  <img class="flag flag-canada mr-4" src="https://d1mjqe83qgtlvc.cloudfront.net/system/images/30755/original/ca-flag-24x24-2.png?1573140235" /><span>Canada</span>
+                              </div>
+                              <a class="dropdown-item menu-link py-8" href="/fr-ca/app">Français (CA)</a>
+                          </div>
+                      </nav>
+                      <nav id="notifications-menu-header" class="nav account-menu dropdown dropdown-notifications nav-wrap text-right drop-shadow">
+                          <a
+                              onclick="gtag('event', 'click-bell', {'event_category' : 'header', 'event_label' : 'Header Bell Icon', 'value' : 10});"
+                              class="btn btn-link btn-sm nav-dropdown-notifications clickable align-items-center d-flex position-relative"
+                              data-toggle="modal"
+                              data-target="#view-products-modal"
+                          >
+                              <i class="fal fa-bell fa-2x font-size-lg" aria-hidden="true"></i> <span class="notifications-count">4</span>
+                          </a>
+                      </nav>
+                  </div>
+              </div>
+          </header>
+          <div class="app-body">
+              <div class="aura-sidebar">
+                  <div class="sidebar-nav">
+                      <ul class="nav h-100">
+                          <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                          <li class="nav-title">Products</li>
+                          <li class="nav-item">
+                              <a href="product.html" class="nav-link">
+                                  All Products <span class="badge badge-bsh-primary ml-auto">1</span>
+                              </a>
+                          </li>
+                          <li class="nav-item">
+                              <a href="/app/products/product_details/252450867" class="nav-link">
+                                  Recent Product
+                              </a>
+                          </li>
+                          <li class="nav-item"><a href="reg2.html" class="nav-link"> Add Product </a></li>
+                          <li class="nav-title">Care</li>
+                          <li class="nav-item">
+                              <a href="/app/service_history" class="nav-link align-items-start">
+                                  Service History
+                              </a>
+                          </li>
+                          <li class="nav-item">
+                              <a
+                                  onclick="gtag('event', 'click-support', {'event_category' : 'portal', 'event_label' : 'Sidebar Product Support', 'value' : 10});"
+                                  href="https://www.registria.com?support=support"
+                                  class="nav-link align-items-start"
+                                  target="_blank"
+                              >
+                                  Product Support <span class="ml-auto"><i class="fal fa-external-link" aria-hidden="true"></i></span>
+                              </a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              <main class="aura-main">
+                  <div class="aura-header-mast"><div class="header-mast-overlay"></div></div>
+                  <div class="aura-content-wrapper">
+                      <div class="aura-container mw-100">
+                          <div class="aura-page-headers">
+                              <section class="mb-0" id="portal-page-headers">
+                                  <div class="markdown-body"><h1 id="welcomeregi"><span class="text-secondary">Hi Diane,</span> here is support for your Washer 3000</h1></div>
+                              </section>
+                          </div>
+                          <div class="aura-content">
+                              <div class="form-row">
+                                  <div class="col-9">
+                                    <div class="form-row">
+                                        <!-- <div class="col-md-4 col-lg-3 text-center mb-8 " >
+                                    <a
+                                      href="https://lg.com/us/laundry-accessories/lg-5231EL1003B-dryer-lint-filter"
+                                      class="card card-tile"
+                                      target=""
+                                    >
+                                        <div class="card-body flex-row flex-md-column justify-content-start justify-content-md-center px-16 px-md-8">
+                                            <h1 class="mr-8 mr-md-0 mb-0 mb-md-4"><i class="fal fa-fw fa-cart-plus text-primary" aria-hidden="true"></i></h1>
+                                            <div class="text-left text-md-center">
+                                                <h3 class="card-tile-name mb-4 mt-0 mt-md-8 text-info">Purchase Parts & Accessories</h3>
+                                                <p class="font-size-sm mb-0">Browse and purchase items specific to your Haven Dryer</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div> -->
+                                <div class="col-md-4 col-lg-3 text-center mb-8 " >
+                                    <a
+                                      href="Demo Owner Manual-2.pdf"
+                                      class="card card-tile"
+                                      target=""
+                                    >
+                                        <div class="card-body flex-row flex-md-column justify-content-start justify-content-md-center px-16 px-md-8">
+                                            <h1 class="mr-8 mr-md-0 mb-0 mb-md-4"><i class="fal fa-fw fa-file text-primary" aria-hidden="true"></i></h1>
+                                            <div class="text-left text-md-center">
+                                                <h3 class="card-tile-name mb-4 mt-0 mt-md-8 text-info">Owner Manuals</h3>
+                                                <p class="font-size-sm mb-0">Download owner manuals, specifications and CADs</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                
+                                <div class="col-md-4 col-lg-3 text-center mb-8">
+                                    <a
+                                        target=""
+                                        href="quickstart-guide.jpg"
+                                        class="card card-tile"
+                                    >
+                                        <div class="card-body flex-row flex-md-column justify-content-start justify-content-md-center px-16 px-md-8">
+                                            <h1 class="mr-8 mr-md-0 mb-0 mb-md-4"><i class="fal fa-fw fa-question text-primary" aria-hidden="true"></i></h1>
+                                            <div class="text-left text-md-center">
+                                                <h3 class="card-tile-name mb-4 mt-0 mt-md-8 text-info">Quickstart Guides</h3>
+                                                <p class="font-size-sm mb-0">Find your answers now</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-4 col-lg-3 text-center mb-8">
+                                    <a
+                                    onclick="gtag('event', 'click-nav-tile-product-support', {'event_category' : 'portal', 'event_label' : 'Nav Tile Product Support', 'value' : 10});"
+                                        target=""
+                                        href="service_power.html"
+                                        class="card card-tile"
+                                    >
+                                        <div class="card-body flex-row flex-md-column justify-content-start justify-content-md-center px-16 px-md-8">
+                                            <h1 class="mr-8 mr-md-0 mb-0 mb-md-4"><i class="fal fa-fw fa-tools text-primary" aria-hidden="true"></i></h1>
+                                            <div class="text-left text-md-center">
+                                                <h3 class="card-tile-name mb-4 mt-0  mt-md-8 text-info">Request a Repair</h3>
+                                                <p class="font-size-sm mb-0">Schedule an appointment with your nearest Haven verified servicer</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-4 col-lg-3 text-center mb-8">
+                                    <a
+                                        onclick="gtag('event', 'click-nav-tile-product-support', {'event_category' : 'portal', 'event_label' : 'Nav Tile Product Support', 'value' : 10});"
+                                        target=""
+                                        href="https://www.registria.com/register-app-brands/"
+                                        class="card card-tile"
+                                    >
+                                        <div class="card-body flex-row flex-md-column justify-content-start justify-content-md-center px-16 px-md-8">
+                                            <h1 class="mr-8 mr-md-0 mb-0 mb-md-4"><i class="fal fa-fw fa-mobile-alt text-primary" aria-hidden="true"></i></h1>
+                                            <div class="text-left text-md-center">
+                                                <h3 class="card-tile-name  mb-4 mt-0 mt-md-8 text-info">Haven App</h3>
+                                                <p class="font-size-sm mb-0">Download the Haven App to control your appliance using your smart phone</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-4 col-lg-3 text-center mb-8">
+                                    <a
+                                        onclick="gtag('event', 'click-nav-tile-product-support', {'event_category' : 'portal', 'event_label' : 'Nav Tile Product Support', 'value' : 10});"
+                                        target=""
+                                        href="../support_esp.html"
+                                        class="card card-tile"
+                                    >
+                                        <div class="card-body flex-row flex-md-column justify-content-start justify-content-md-center px-16 px-md-8">
+                                            <h1 class="mr-8 mr-md-0 mb-0 mb-md-4"><i class="fal fa-fw fa-user-shield text-primary" aria-hidden="true"></i></h1>
+                                            <div class="text-left text-md-center">
+                                                <h3 class="card-tile-name  mb-4 mt-0 mt-md-8 text-info">Premium Care</h3>
+                                                <p class="font-size-sm mb-0">Purchase an official Haven care plan to protect your Haven appliances</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-4 col-lg-3 text-center mb-8">
+                                    <a
+                                        onclick="gtag('event', 'click-nav-tile-product-support', {'event_category' : 'portal', 'event_label' : 'Nav Tile Product Support', 'value' : 10});"
+                                        target=""
+                                        href="../support_merch.html"
+                                        class="card card-tile"
+                                    >
+                                        <div class="card-body flex-row flex-md-column justify-content-start justify-content-md-center px-16 px-md-8">
+                                            <h1 class="mr-8 mr-md-0 mb-0 mb-md-4"><i class="fal fa-fw fa-shopping-cart text-primary" aria-hidden="true"></i></h1>
+                                            <div class="text-left text-md-center">
+                                                <h3 class="card-tile-name  mb-4 mt-0 mt-md-8 text-info">Online Brand Shop</h3>
+                                                <p class="font-size-sm mb-0">Purchase official Haven products</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                    <div class="col-md-4 col-lg-3 text-center mb-8">
+                                        <a
+                                            onclick="gtag('event', 'click-nav-tile-recent', {'event_category' : 'portal', 'event_label' : 'Nav Tile Recent Product', 'value' : 10});"
+                                            target=""
+                                            href="https://youtu.be/IM6niltpeFI"
+                                            class="card card-tile"
+                                        >
+                                            <div class="card-body flex-row flex-md-column justify-content-start justify-content-md-center px-16 px-md-8">
+                                                <h1 class="mr-8 mr-md-0 mb-0 mb-md-4"><i class="fal fa-video fa-fw text-primary" aria-hidden="true"></i></h1>
+                                                <div class="text-left text-md-center">
+                                                    <h3 class="card-tile-name mb-4 mt-0 mt-md-8 text-info">How-to Videos</h3>
+                                                    <p class="font-size-sm mb-0">Learn how to clean and care for your appliance</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4 col-lg-3 text-center mb-8">
+                                        <a
+                                            onclick="gtag('event', 'click-nav-tile-product-support', {'event_category' : 'portal', 'event_label' : 'Nav Tile Product Support', 'value' : 10});"
+                                            target=""
+                                            href=""
+                                            class="card card-tile"
+                                        >
+                                            <div class="card-body flex-row flex-md-column justify-content-start justify-content-md-center px-16 px-md-8">
+                                                <h1 class="mr-8 mr-md-0 mb-0 mb-md-4"><i class="fal fa-fw fa-shield text-primary" aria-hidden="true"></i></h1>
+                                                <div class="text-left text-md-center">
+                                                    <h3 class="card-tile-name  mb-4 mt-0 mt-md-8 text-info">Warranty Information</h3>
+                                                    <p class="font-size-sm mb-0">Simply select a product category to learn more about your appliance's warranty</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                          
+                                      </div>
+                                    </div>
+                                    <div class="col-3 content-justify-center">
+                                        <div class="col text-center mb-8">
+                                                                              <div id="inflowPurchase" style="z-index:0" class="carousel slide carousel-fade " data-ride="carousel">
+                                                                                <h3><b>Exclusive Offers</b></h3>
+                                                                                
+                                                                                <!--Slides-->
+                                                                                <div class="carousel-inner flex" role="listbox">
+                                                                                  <!--First slide-->
+                                                                                  <div class="carousel-item active">
+                                                                                    <div class="card mb-8" >
+                                                                                      <img class="d-block  card-img-top" style="height: 200px; width: auto;" src="https://www.lg.com/us/images/appliance-accessories/5215er2002g/gallery/large_2g-0002.jpg">
+                                                                                    <div class="card-body flex-row flex-md-column justify-content-start justify-content-md-center px-16 px-md-8">
+                                                                                        <div class="">
+                                                                                            <!-- text-left text-md-left -->
+                                                                                            <h6 class="card-tile-name mb-4 mt-0 mt-md-8">Universal Remote</h6>
+                                                                                        </div>
+                                                                                        <div class=""> 
+                                                                                            <!-- text-left text-md-right -->
+                                                                                            <h6 class="card-tile-name mb-4 mt-0 mt-md-8"><span class="text-primary">$24.90</span></h6>
+                                                                                        </div>
+                                                                                        <a href="" class="btn btn-primary text-secondary"><i class="fas fa-shopping-cart"></i> Shop now</a>
+                                                                                    </div>
+                                                                                  </div>
+                                                                                  </div>
+                                                                                  <!--/First slide-->
+                                                                                  <!--Second slide-->
+                                                                                  <div class="carousel-item">
+                                                                                    <div class="card mb-8" style="height: 59vh; width: auto;">
+                                                                                        <img class="d-block  card-img-top" style="height: 200px; width: auto;" src="https://www.lg.com/us/images/appliances/features/01_Dryer-Racks.jpg">
+                                                                                      <div class="card-body flex-row flex-md-column justify-content-start justify-content-md-center px-16 px-md-8">
+                                                                                        <div class="">
+                                                                                            <!-- text-left col-md-8 text-md-left -->
+                                                                                            <h6 class="card-tile-name mb-4 mt-0 mt-md-8">Connection Cable</h6>
+                                                                                        </div>
+                                                                                        <div class="">
+                                                                                            <h6 class="card-tile-name mb-4 mt-0 mt-md-8"><span class="text-primary">$9.90</span></h6>
+                                                                                        </div>
+                                                                                        <a href="" class="btn btn-primary text-secondary"><i class="fas fa-shopping-cart"></i> Shop now</a>
+                                                                                      </div>
+                                                                                
+                                                                                    </div>
+                                                                                  </div>
+                                                                                  <!--/Second slide-->
+                                                                                  <!--Third slide-->
+                                                                                  <div class="carousel-item">
+                                                                                    <div class="card mb-8" style="height: 59vh; width: auto;">
+                                                                                      <img class="d-block w-100 card-img-top" style="height: 200px; width: auto;" src="https://www.lg.com/us/images/laundry-accessories/md05856739/gallery/medium01.jpg">
+                                                                                        <div class="card-body flex-row flex-md-column justify-content-start justify-content-md-center px-16 px-md-8">
+                                                                                        <div class="">
+                                                                                          <h6 class="card-tile-name mb-4 mt-0 mt-md-4">Stereo to iPhone cable</h6>
+                                                                                        </div>
+                                                                                        <div class="">
+                                                                                            <h6 class="card-tile-name mb-4 mt-0 mt-md-8"><span class="text-primary">$11.90</span></h6>
+                                                                                        </div>
+                                                                                        <a href="" class="btn btn-primary text-secondary"><i class="fas fa-shopping-cart"></i> Shop now</a>
+                                                                                      </div>
+                                                                                    </div>
+                                                                                  </div>
+                                                                                  <!--/Third slide-->
+                                                                                  <!--Chevrons-->
+                                                                                  <a class="carousel-control-prev" href="#inflowPurchase" role="button" data-slide="prev">
+                                                                                    <i class="fas fa-chevron-left text-secondary"></i>
+                                                                                    <span class="sr-only">Previous</span>
+                                                                                  </a>
+                                                                                  <a class="carousel-control-next" href="#inflowPurchase" role="button" data-slide="next">
+                                                                                    <i class="fas fa-chevron-right text-secondary"></i>
+                                                                                    <span class="sr-only">Next</span>
+                                                                                  </a>
+                                            
+                                                                                </div>
+                                                                                <!--/.Slides-->
+                                                                                <!--/Chevrons-->
+                                                                              </div>
+                                                                            </div>
+                                            <!--/.Carousel Wrapper-->
+                                            <!--/crousell-->
+                                  </div>
+                                  
+                                  </div>
+                                
+                              
+
+                              
+                                
+                              <div class="modal fade" id="claim-select-product-modal" tabindex="-1" role="dialog" aria-labelledby="Select Your Product" aria-hidden="true">
+                                  <div class="modal-dialog" role="document">
+                                      <div class="modal-content">
+                                          <div class="modal-header">
+                                              <p class="mb-0">Select</p>
+                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fal fa-times" aria-hidden="true"></i></button>
+                                          </div>
+                                          <div class="modal-body animated fade-in p-0">
+                                              <div class="list mb-0">
+                                                  <a
+                                                      onclick="gtag('event', 'click-product', {'event_category' : 'portal', 'event_label' : 'Select Product to Add Service', 'value' : 10});"
+                                                      href="/app/service_request/251370229"
+                                                      class="item item-bottom-border py-4"
+                                                  >
+                                                      <div class="avatar avatar-lg my-0 avatar-square bg-transparent border-0">
+                                                          <img class="img-fluid mh-100" src="https://d29aas0ezuolap.cloudfront.net/system/images/758346/original/coffee_maker.png?1586746505" />
+                                                      </div>
+                                                      <div class="item-inner">
+                                                          <div class="input-wrapper">
+                                                              <div class="item-label">
+                                                                  <h6 class="text-dark mb-0">Coffee Maker 5000</h6>
+                                                                  <p class="text-dark mb-0 font-size-sm"><strong>Purchase Date:</strong> 07/07/2020</p>
+                                                              </div>
+                                                          </div>
+                                                      </div>
+                                                      <div class="item-end mr-0"><i class="fal fa-angle-right text-secondary fa-2x" aria-hidden="true"></i></div>
+                                                  </a>
+                                                  <a
+                                                      onclick="gtag('event', 'click-product', {'event_category' : 'portal', 'event_label' : 'Select Product to Add Service', 'value' : 10});"
+                                                      href="/app/service_request/251370964"
+                                                      class="item item-bottom-border py-4"
+                                                  >
+                                                      <div class="avatar avatar-lg my-0 avatar-square bg-transparent border-0">
+                                                          <img class="img-fluid mh-100" src="https://d3r2ao2dqaz6zh.cloudfront.net/system/images/763476/original/monitor-32743_1280.png?1591738137" />
+                                                      </div>
+                                                      <div class="item-inner">
+                                                          <div class="input-wrapper">
+                                                              <div class="item-label">
+                                                                  <h6 class="text-dark mb-0">TV 5000</h6>
+                                                                  <p class="text-dark mb-0 font-size-sm"><strong>Purchase Date:</strong> 07/07/2020</p>
+                                                              </div>
+                                                          </div>
+                                                      </div>
+                                                      <div class="item-end mr-0"><i class="fal fa-angle-right text-secondary fa-2x" aria-hidden="true"></i></div>
+                                                  </a>
+                                                  <a
+                                                      onclick="gtag('event', 'click-product', {'event_category' : 'portal', 'event_label' : 'Select Product to Add Service', 'value' : 10});"
+                                                      href="/app/service_request/251371177"
+                                                      class="item item-bottom-border py-4"
+                                                  >
+                                                      <div class="avatar avatar-lg my-0 avatar-square bg-transparent border-0">
+                                                          <img class="img-fluid mh-100" src="https://d1mjqe83qgtlvc.cloudfront.net/system/images/746421/original/ref2.png?1594758872" />
+                                                      </div>
+                                                      <div class="item-inner">
+                                                          <div class="input-wrapper">
+                                                              <div class="item-label">
+                                                                  <h6 class="text-dark mb-0">French Door Platinum Refrigerator</h6>
+                                                                  <p class="text-dark mb-0 font-size-sm"><strong>Purchase Date:</strong> 07/07/2020</p>
+                                                              </div>
+                                                          </div>
+                                                      </div>
+                                                      <div class="item-end mr-0"><i class="fal fa-angle-right text-secondary fa-2x" aria-hidden="true"></i></div>
+                                                  </a>
+                                                  <a
+                                                      onclick="gtag('event', 'click-product', {'event_category' : 'portal', 'event_label' : 'Select Product to Add Service', 'value' : 10});"
+                                                      href="/app/service_request/252450867"
+                                                      class="item item-bottom-border py-4"
+                                                  >
+                                                      <div class="avatar avatar-lg my-0 avatar-square bg-transparent border-0">
+                                                          <img class="img-fluid mh-100" src="https://d29aas0ezuolap.cloudfront.net/system/images/765570/original/speaker.png?1597428409" />
+                                                      </div>
+                                                      <div class="item-inner">
+                                                          <div class="input-wrapper">
+                                                              <div class="item-label">
+                                                                  <h6 class="text-dark mb-0">speaker 5000</h6>
+                                                                  <p class="text-dark mb-0 font-size-sm"><strong>Purchase Date:</strong> 08/08/2020</p>
+                                                              </div>
+                                                          </div>
+                                                      </div>
+                                                      <div class="item-end mr-0"><i class="fal fa-angle-right text-secondary fa-2x" aria-hidden="true"></i></div>
+                                                  </a>
+                                                  <a href="/reg" class="item item-no-border py-4">
+                                                      <div class="avatar avatar-lg my-0 avatar-square bg-transparent border-0"><i class="fal fa-plus-circle" aria-hidden="true"></i></div>
+                                                      <div class="item-inner">
+                                                          <div class="input-wrapper">
+                                                              <div class="item-label"><h6 class="mb-0 text-dark">Add Product</h6></div>
+                                                          </div>
+                                                      </div>
+                                                      <div class="item-end mr-0"><i class="fal fa-angle-right text-secondary fa-2x" aria-hidden="true"></i></div>
+                                                  </a>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- here -->
+                      </div>
+                  </div>
+              </main>
+          </div>
+      </div>
+      <footer>
+          <div class="aura-footer" id="footer-text">
+              <div class="aura-footer-inner d-flex flex-column flex-md-row">
+                  <div>
+                      <div class="markdown-body pr-0 pr-md-8"><p class="text-primary d-flex justify-content-center">© 2020 Haven</p></div>
+                  </div>
+                  <div class="footer-social-icons d-flex mt-8 mt-md-0 justify-content-center justify-content-md-end ml-0 ml-md-auto">
+                      <a class="social-icon h3 pl-md-2 pl-0 pr-2 pr-md-0 mb-0" href="https://mktg.registria.com/l/399502/2017-10-26/ckldfq" target="_blank"><i class="fab fa-facebook-square text-primary" aria-hidden="true"></i> </a>
+                      <a class="social-icon h3 pl-md-2 pl-0 pr-2 pr-md-0 mb-0" href="https://mktg.registria.com/l/399502/2017-10-26/ckldgj" target="_blank"><i class="fab fa-twitter-square text-primary" aria-hidden="true"></i> </a>
+                      <a class="social-icon h3 pl-md-2 pl-0 pr-2 pr-md-0 mb-0" href="https://mktg.registria.com/l/399502/2017-09-21/by41fj" target="_blank"><i class="fab fa-youtube-square text-primary" aria-hidden="true"></i> </a>
+                      <a class="social-icon h3 pl-md-2 pl-0 pr-2 pr-md-0 mb-0" href="https://mktg.registria.com/l/399502/2017-10-26/ckldgb" target="_blank"><i class="fab fa-linkedin text-primary" aria-hidden="true"></i> </a>
+                  </div>
+              </div>
+          </div>
+      </footer>
+      <script src="https://registria-templates.s3.amazonaws.com/Standard/27/scripts/portal.js"></script>
+      <script src="../scripts/rivets.js"></script>
+      <script src="../scripts/demo.js"></script>
+      <script src="https://kit.fontawesome.com/b3555eb3a9.js" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <script>
+        rivets.binders['set-class'] = function(el, value){
+          el.className += ' '+ value;
+        }
+      </script>
+
+  </body>
+</html>

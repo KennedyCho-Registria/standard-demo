@@ -1,0 +1,342 @@
+<html lang="en" id="aura">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="csrf-param" content="authenticity_token">
+    <meta name="csrf-token" content="wCdh4aHdEtIywI37/t1T8MfQwdhflM2/+Wm/MUVIXj9S9HtLFT0zgP9GyN3Z5e70VKgR1mZYap1UflCMIYddiw==">
+    <script
+			  src="https://code.jquery.com/jquery-2.2.4.min.js"
+			  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+			  crossorigin="anonymous"></script>
+    <script src="scripts/jquery-ui.min.js"></script>
+    <script src="scripts/jquery-ui-i18n.min.js"></script>
+    <script src="scripts/client.min.js"></script>
+    <script src="scripts/vendor.js"></script>
+    <script src="scripts/quickstart.js"></script>
+    <link rel="stylesheet" href="styles/standard.css">
+    <link rel="stylesheet" href="styles/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    <title>Haven</title>
+    <link rel="shortcut icon" href="img/favicon.png">
+  </head>
+  <body class="aura" cz-shortcut-listen="true">
+    <div class="custom-header-html"></div>
+    <div class="aura-header-mast"></div>
+
+    <!-- CONTAINER -->
+    <div class="aura-container">
+
+      <!-- HEADER -->
+      <header class="aura-header">
+        <div class="d-flex align-items-center justify-content-center">
+          <img rv-src="aura.logo" alt="Speaker Speaker" class="logo">
+        </div>
+      </header>
+      <!-- / HEADER -->
+
+      <!-- STEPS -->
+      <div class="aura-content-container">
+        <div class="content">
+          <nav class="aura-steps">
+            <ul class="steps">
+
+              <!-- STEP 1 -->
+              <li class="step primary">
+                <svg><line x1="0" y1="0" x2="100%" y2="0" /></svg>
+                <svg><line x1="0" y1="0" x2="100%" y2="0" /></svg>
+              </li>
+              <li class="step primary">
+                <svg><circle cx="16" cy="16" r="15" stroke="#231f20" stroke-width="1" fill-opacity="0" /></svg>
+                <svg><circle cx="16" cy="16" r="15" stroke="#231f20" stroke-width="1" fill-opacity="0" /></svg>
+                <div><i class="fal fa-check"></i></div>
+              </li>
+              <!-- / STEP 1-->
+
+              <!-- STEP 2 -->
+              <li class="step primary">
+                <svg><line x1="0" y1="0" x2="100%" y2="0" /></svg>
+                <svg><line x1="0" y1="0" x2="100%" y2="0" /></svg>
+              </li>
+              <li class="step primary">
+                <svg><circle cx="16" cy="16" r="15" stroke="#231f20" stroke-width="1" fill-opacity="0" /></svg>
+                <svg><circle cx="16" cy="16" r="15" stroke="#231f20" stroke-width="1" fill-opacity="0" /></svg>
+                <div><i class="fal fa-check"></i></div>
+              </li>
+              <!-- / STEP 2-->
+
+              <!-- STEP 3 -->
+              <li class="step animate">
+                <svg><line x1="0" y1="0" x2="100%" y2="0" /></svg>
+                <svg><line x1="0" y1="0" x2="100%" y2="0" /></svg>
+              </li>
+              <li class="step animate">
+                <svg><circle cx="16" cy="16" r="15" stroke="#231f20" stroke-width="1" fill-opacity="0" /></svg>
+                <svg><circle cx="16" cy="16" r="15" stroke="#231f20" stroke-width="1" fill-opacity="0" /></svg>
+                <div><i class="fal fa-check"></i></div>
+              </li>
+              <!-- / STEP 3 -->
+
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <!-- / STEPS -->
+
+      <!-- MAIN CONTENT -->
+      <main class="aura-content">
+
+        <!-- PAGE HEADERS -->
+        <div class="aura-page-headers aura-content-container">
+          <div class="content">
+            <h1 class="page-header">{ aura.confirmationHeader } {aura.ownerName }</h1>
+            <h5 class="page-subheader">{ aura.confirmationSubheader }</h5>
+          </div>
+        </div>
+
+        <hr class="section-divider">
+        <!-- confimation details-->
+        <div class="aura-content-container">
+          <div class="content-sm">
+            <div class="content-box border-lighter">
+              <div class="content-box-body">
+                <div class="confirmation-details-product mb-3">
+                  <p class="text-primary mb-2 text-uppercase">You've Registered</p>
+                  <dl class="row mb-0">
+                    <dt class="col-4">Model Number:</dt>
+                    <dd class="col-6">{ aura.regModelNumber }</dd>
+
+                  </dl>
+                  <dl class="row mb-0">
+                    <dt class="col-4 ">Serial Number:</dt>
+                    <dd class="col-6">{ aura.regSerialNumber }</dd>
+                  </dl>
+                  <dl class="row">
+                    <dt class="col-4">Purchase Date:</dt>
+                    <dd class="col-6">01/01/2019</dd>
+                  </dl>
+                </div>
+                <div class="confirmation-details-esp mb-3">
+                  <p class="mb-2 text-primary text-uppercase">Your Service Plan</p>
+                  <dl class="row mb-0">
+                    <dt class="col-4">Plan:</dt>
+                    <dd class="col-6">{ aura.espOptions.0.title }</dd>
+                  </dl>
+                  <dl class="row">
+                    <dt class="col-4">Total Price:</dt>
+                    <dd class="col-6">{ aura.espOptions.0.price }</dd>
+                  </dl>
+                </div>
+                <div class="confirmation-details-merchandise">
+                  <p class="mb-2 text-primary text-uppercase">Your Merchandise</p>
+                  <dl class="row mb-0">
+                    <dt class="col-4">Merchandise:</dt>
+                    <dd class="col-6">{ aura.merchandiseOffers.0.title }</dd>
+                  </dl>
+                  <dl class="row">
+                    <dt class="col-4">Total Price:</dt>
+                    <dd class="col-6">{aura.merchandiseOffers.0.price }</dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="section-divider">
+        <!-- confimation details-->
+
+        <div class="aura-content-container">
+          <div class="content">
+            <h2 class="section-header-centered">Hot Offers</h2>
+            <h6 class="text-center">Here are some exclusive offers for our loyal customers!</h6>
+          </div>
+        </div>
+
+        <!-- MERCHANDISE -->
+        <section class="merchandise mb-5">
+
+          <!-- / MERCHANDISE - OFFERS -->
+          <div class="merchandise-offers">
+
+            <!-- MERCHANDISE - OFFER LOOP -->
+            <div rv-each-merch="aura.confirmationOffers" class="merchandise-offer">
+              <div class="merchandise-desc mb-3">
+                <div class="d-flex align-items-center">
+                  <img class="img-fluid merchandise-img mt-2" rv-src="merch.img" />
+                </div>
+                <p class="best-value mb-1">{ merch.bestValue }</p>
+                <h4 class="merchandise-title">{ merch.title }</h4>
+                <p class="merchandise-subtitle">{ merch.desc }</p>
+              </div>
+              <div class="d-flex flex-row text-center merchandise-price">
+                <h4 rv-if="merch.hasMsrp" class="mb-0 flex-fill"><s class="text-muted">{ merch.msrp }</s></h4>
+                <h5  class="mb-0 flex-fill font-weight-bold">{ merch.price }</h5>
+              </div>
+              <div class="merchandise-button mt-auto text-center">
+                <a rv-href="merch.buttonLink" class="btn btn-outline-primary h6 py-4 px-8">{ merch.buttonText }</a>
+              </div>
+
+            </div>
+            <!-- / MERCHANDISE - OFFER LOOP -->
+
+          </div>
+          <!-- / MERCHANDISE - OFFERS -->
+
+        </section>
+        <!-- / MERCHANDISE -->
+
+        <hr class="section-divider">
+
+        <div class="aura-content-container">
+          <div class="content">
+            <h3 class="section-header-centered">Speaker Recipes</h3>
+          </div>
+        </div>
+
+        <div class="aura-content-container">
+          <div class="content">
+            <div class="video-wrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/CJN1n3fId_A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+
+        <!-- SUBMIT BUTTON -->
+        <div class="row submit-button justify-content-center">
+          <div class="col-lg-6">
+            <a href="#" class="btn btn-outline-primary btn-lg btn-block h6">Learn More</a>
+          </div>
+        </div>
+        <!-- / SUBMIT BUTTON -->
+
+        <!-- SUBMIT BUTTON -->
+        <div class="row submit-button justify-content-center">
+          <div class="col-lg-6">
+            <a href="reg2.html" class="btn btn-primary btn-lg btn-block">Register Another Product</a>
+            <a target="_blank" href="reg2.html" class="btn btn-lg btn-block btn-outline-primary mt-3">Visit Website</a>
+          </div>
+        </div>
+        <!-- / SUBMIT BUTTON -->
+
+      </main>
+      <!-- / MAIN CONTENT -->
+
+      <!-- FOOTER -->
+      <footer class="row aura-footer">
+        <div class="col-lg-12 text-center">
+          <p class="mb-4 text-center">
+            <a id="privacyPolicy" href="#privacyPolicy" class="text-primary"> Privacy Policy</a>&nbsp; | &nbsp; <a id="termsConditions"  href="#termsConditions" class="text-primary"> Terms &amp; Conditions</a></p>
+					<p class="mb-4 text-center">© 2020 { aura.copyright }. All Rights Reserved.</p>
+            <div
+              class="footer-social-icons d-flex mt-8 mt-md-0 justify-content-center ml-0 ml-md-auto">
+              <a class="social-icon h3 pl-md-2 pl-0 pr-2 pr-md-0 mb-0"
+                href="https://mktg.registria.com/l/399502/2017-10-26/ckldfq" target="_blank"><i
+                  class="fab fa-facebook-square" aria-hidden="true"></i> </a> <a
+                class="social-icon h3 pl-md-2 pl-0 pr-2 pr-md-0 mb-0"
+                href="https://mktg.registria.com/l/399502/2017-10-26/ckldgj" target="_blank"><i
+                  class="fab fa-twitter-square" aria-hidden="true"></i> </a> <a
+                class="social-icon h3 pl-md-2 pl-0 pr-2 pr-md-0 mb-0"
+                href="https://mktg.registria.com/l/399502/2017-09-21/by41fj" target="_blank"><i
+                  class="fab fa-youtube-square" aria-hidden="true"></i> </a> <a
+                class="social-icon h3 pl-md-2 pl-0 pr-2 pr-md-0 mb-0"
+                href="https://mktg.registria.com/l/399502/2017-10-26/ckldgb" target="_blank"><i class="fab fa-linkedin"
+                  aria-hidden="true"></i> </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <div class="custom-footer-html"></div>
+
+    </div>
+    <!-- / CONTAINER -->
+    <!-- MODAL - SURVEY>
+    <div id="quick-intent" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="model_serial_helper_modalLabel" aria-hidden="true">
+
+          <div class="container-fluid">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h3 class="modal-title lg-semibold text-primary mb-0" id="exampleModalLabel">Before you go...</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <h6 class="modal-question pb-4">{ aura.surveyQuestion }</h6>
+                    <div class="row">
+                      <! SURVEY CHECKBOX LOOP >
+                      <div class="col-6" rv-each-checkbox="aura.surveyItem">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" rv-id="checkbox.name" name="user[receive_mobile_communication]" value="1">
+                          <label rv-for="checkbox.name" class="checkbox-opt-in-text custom-control-label"><p class="pl-1 pt-1">{ checkbox.label }</p> </label>
+                        </div>
+                      </div>
+                      <! / SURVEY CHECKBOX LOOP >
+                    </div>
+                  </div>
+                  <div class="modal-footer bg-white py-3">
+                    <button id="cancel" data-reg="1509113" class="btn btn-primary" type="button" data-line-number="" class="close" data-dismiss="modal" aria-label="Close">Submit</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      </div>
+    </div>
+        <!--/ MODAL -->
+
+        <div class="modal fade" id="quick-intent" data-keyboard="false" data-backdrop="false">
+  <div class="lab-modal-body">
+    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+    <h1>
+			Terms and Conditions		</h1>
+
+    <p>LICENSING</p>
+    <p>Licenses are valid for one year from the date of purchase. When asking for support with any purchased plugin, you may be asked to provide a valid license key as proof of purchase.</p>
+    <p>SOFTWARE UPDATES</p>
+    <p>Updates are included for free for one year. If you have a valid and active license key, and your purchased plugin(s) supports it, updates will be delivered automatically from the WordPress dashboard. If your plugin(s) does not support automatic upgrades,
+      then updates can be downloaded from your <a href="https://1wd.tv/my-account/" target="_blank">account</a> page.</p>
+    <p>SUPPORT SERVICES</p>
+    <p>Support for purchased plugins is given up to one year after the purchase date. If you wish to get support after one year, you must purchase a new license key for the plugin you are seeking support for.</p>
+    <p>REFUNDS</p>
+    <p>I&nbsp;firmly believe in and stand behind my&nbsp;products 100%, but I&nbsp;are understand that no all plugins&nbsp;can&nbsp;work perfectly for everyone all of the time. If you are unhappy with your purchase, or you have an issue that we are unable
+      to resolve that makes the system unusable, I&nbsp;am more than happy to provide a complete refund within 30 days of your original purchase.</p>
+    <p>A few conditions:</p>
+    <ol>
+      <li>I&nbsp;cannot provide refunds due to technical issues unless you allow us to adequately try and assist you. If we are unable to resolve the issue for you, I&nbsp;will provide a refund. Please open a support ticket before requesting a refund for
+        a technical issue.</li>
+      <li>Refunds may only be issued within 30 days of the purchase date. After 30 days no refunds can be processed.</li>
+    </ol>
+    <div class="text-center">
+      <a href="https://1wd.tv/" target="_blank" class="btn-primary btn-plain btn btn-lg popup-button">Visit 1WD.tv!</a>
+    </div>
+  </div>
+  <!-- /.modal-body -->
+</div>
+<!-- /.modal -->
+<!-- END MODAL CONTENT SAMPLE -->
+
+
+    <script src="scripts/popper.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+
+    <script src="scripts/rivets.js"></script>
+    <script src="scripts/demo.js"></script>
+    <script>
+      rivets.binders['set-class'] = function(el, value){
+        el.className += ' '+ value;
+      }
+    </script>
+
+    <script type="text/javascript">
+			$(window).load(function(){
+   		setTimeout(function(){
+       $('#quick-intent').modal('show');
+   			}, 1800);
+			});
+    </script>
+
+  </body>
+</html>

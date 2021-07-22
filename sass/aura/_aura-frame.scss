@@ -1,0 +1,183 @@
+// Container widths
+//
+// Set the container width, and override it for fixed navbars in media queries.
+
+@if $enable-grid-classes {
+  .aura-container {
+    @include make-container();
+		@include make-container-max-widths();
+  }
+}
+
+// Fluid container
+//
+// Utilizes the mixin meant for fixed width containers, but with 100% width for
+// fluid, full width layouts.
+
+@if $enable-grid-classes {
+  .aura-container-fluid {
+    @include make-container();
+  }
+}
+
+// Row
+//
+// Rows contain and clear the floats of your columns.
+
+@if $enable-grid-classes {
+  .row {
+		@include make-row();
+		margin-left: -$spacer-8;
+		margin-right: -$spacer-8;
+  }
+
+  // Remove the negative margin from default .row, then the horizontal padding
+  // from all immediate children columns (to prevent runaway style inheritance).
+  .no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+
+    > .col,
+    > [class*="col-"] {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+}
+
+// Columns
+//
+// Common styles for small and large grid columns
+
+@if $enable-grid-classes {
+  @include make-grid-columns();
+}
+
+body {
+	color: $darkest;
+}
+
+// Solid background color at the top of the page
+.aura-header-mast{
+	background-color: $primary;
+	height: $header-mast-height;
+}
+
+// The main container for the user experience
+.aura-container{
+	box-shadow: $container-box-shadow;
+	// margin-top: $container-offset;
+	margin-bottom: $spacer-8;
+	background-color: $white;
+	padding-top: $spacer-8;
+	
+	// padding-top: 1%;
+
+}
+
+// Brand logo and language selector
+.aura-header{
+	color: $dark;
+	position: relative;
+	top: 0% !important;
+	z-index: 1;
+	padding-bottom: 2%;
+
+	.logo-container{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100px;
+	}
+}
+
+.aura-content{
+	padding-left: $spacer-8;
+	padding-right: $spacer-8;
+}
+
+section{
+	margin-bottom: $spacer-12;
+}
+
+.header-mast-hidden{
+
+	.aura-header-mast{
+		display: none;
+	}
+
+	.aura-container{
+		margin-top: $spacer-8;
+		padding-top: $spacer-8;
+	}
+}
+
+.aura-content-container{
+	@extend .row;
+	justify-content: center;
+	margin-bottom: $spacer-8;
+	min-height: $spacer-8;
+
+	
+
+	.content{
+		flex: 0 0 $content-container-width;
+		max-width: $content-container-width;
+		padding-left: $spacer-8;
+		padding-right: $spacer-8;
+
+		
+	}
+
+	.content-sm{
+		flex: 0 0 $content-container-width-sm;
+		max-width: $content-container-width-sm;
+		padding-left: -$spacer-8;
+		padding-right: -$spacer-8;
+	}
+}
+
+hr.section-divider{
+	border-width: 3px;
+	border-color: $primary;
+	width: 4rem;
+	margin: $spacer-16 auto;
+}
+
+.login{
+
+	.card{
+		min-height: 500px;
+	}
+}
+
+@include media-breakpoint-down(md) {
+	.aura-container{
+		margin-top: 0;
+		margin-bottom: 0;
+		border-top: 10px solid $primary;
+	}
+
+	.aura-header-mast{
+		height: 0;
+	}
+
+	.aura-content{
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.aura-content-container{
+	
+		.content{
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+	
+		.content-sm{
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+	}
+}
+

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    
+    <link rel="stylesheet" href="styles/standard.css">
+    <link rel="stylesheet" href="/stylesheets/home.css">
+
+    <title>Haven</title>
+
+    <link rel="shortcut icon" href="https://d3d2px1in9aet5.cloudfront.net/system/images/images/6036/original/Haven-Favicon.png?1624305243">
+    
+
+    <style>
+      
+      
+      /* The Modal (background) */
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        -webkit-animation-name: fadeIn; /* Fade in the background */
+        -webkit-animation-duration: 0.4s;
+        animation-name: fadeIn;
+        animation-duration: 0.4s
+      }
+      
+      /* Modal Content */
+      .modal-content {
+        position: fixed;
+        bottom: 20%;
+        background-color: #fefefe;
+        left: 25%;
+        width: 50%;
+        -webkit-animation-name: slideIn;
+        -webkit-animation-duration: 0.4s;
+        animation-name: slideIn;
+        animation-duration: 0.4s
+      }
+      
+      /* The Close Button */
+      .close {
+        color: white;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+      
+      .close:hover,
+      .close:focus {
+        color: $info;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      
+      .modal-header {
+        padding: 2px 16px;
+        background-color: $primary;
+        color: white;
+      }
+      
+      .modal-body {padding: 2px 16px;}
+      
+      
+      
+      /* Add Animation */
+      @-webkit-keyframes slideIn {
+        from {bottom: -300px; opacity: 0} 
+        to {bottom: 20%; opacity: 1}
+      }
+      
+      @keyframes slideIn {
+        from {bottom: -300px; opacity: 0}
+        to {bottom: 20%; opacity: 1}
+      }
+      
+      @-webkit-keyframes fadeIn {
+        from {opacity: 0} 
+        to {opacity: 1}
+      }
+      
+      @keyframes fadeIn {
+        from {opacity: 0} 
+        to {opacity: 1}
+      }
+      </style>
+  </head>
+
+  <body id="aura" class="aura">
+
+    <header class="aura-header">
+      
+      <div class="dropdown nav-wrap text-right">
+        <a class="btn btn-sm nav-dropdown text-primary text-uppercase pb-0">
+          <h3>
+            <i class="fas fa-language text-secondary"></i>
+            <span><i class="fal fa-angle-down"></i></span>
+          </h3>
+        </a>
+      </div>
+
+      <div class="d-flex align-items-center justify-content-center">
+        <img src="https://d3d2px1in9aet5.cloudfront.net/system/images/images/6035/original/Haven-Logo.png?1624305213" alt="" class="logo">
+      </div>
+
+    </header>
+
+    <main class="aura-content">
+      <div class="aura-page-headers">
+        <div class="header-container">
+          <h1 class="page-header">Welcome back</h1>
+          <h1 class="page-header">Kennedy</h1>
+          <h5 class="page-subheader">Confirm your personal information is accurate</h5>  
+        </div>
+      </div>
+
+      <!-- PRODUCT INFORMATION -->
+      <div class="form_container">
+        <section class="owner-information-details mt-4">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="content-box border-lighter">
+                  <div class="content-box-body">
+                    <!-- OWNER INFO CHECKBOX -->
+                    <div class="custom-control custom-checkbox mb-0">
+                      <input type="checkbox" class="custom-control-input" id="use-existing-owner-info" name="use-existing-owner-info" value="1" checked="checked">
+                      <label for="use-existing-owner-info" class="checkbox-opt-in-text custom-control-label" data-toggle="collapse" href="#owner-info" aria-expanded="false" aria-controls="ownerInfo">
+                        <p class="pt-1 text-light pb-0">Use this information to register</p>
+                      </label>
+                    </div>
+                    <!-- / OWNER INFO CHECKBOX -->
+                    <div class="recognized-owner-information">
+                      <dl class="row mb-0">
+                        <dt class="col-6">Name:</dt>
+                        <dd class="col-6">Kennedy Cambra-Cho</dd>
+                      </dl>
+                      <dl class="row mb-0">
+                        <dt class="col-6">Email:</dt>
+                        <dd class="col-6">123@gmail.com</dd>
+                      </dl>
+                      <dl class="row">
+                        <dt class="col-6">Phone:</dt>
+                        <dd class="col-6">+1 111 1111</dd>
+                      </dl>
+                      <dl class="row">
+                        <dt class="col-6">Address:</dt>
+                        <dd class="col-6">123 Stout St. Denver, CO 96816</dd>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        <section class="registraion-product-information">
+          <h3 class="section-header text-uppercase">Product Information</h3>
+          <div class="row " id="product_1">
+            
+            <div class=" col-md-12  ">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-lg-6">
+              <div class="form-group"><label for="model">Model Number</label>
+                <input type="text" autocomplete="off" class="form-control autocomplete-product registria_field" name="registration[model]" id="model" value="" data-model-string="{name} ({sku})" required="">
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label for="serial">Serial Number</label>
+                <input class="form-control registria_field" id="serial" name="registration[serial_number]" value="" type="text">
+              </div>
+            </div>
+          </div>
+          <div>
+              <p class="text-primary small pb-2 font-weight-light">Can't Find Your Model/Serial Number?</p>
+            </a>
+          </div>
+        </section>
+      <!-- / PRODUCT INFORMATION -->
+
+        <!-- PURCHASE INFORMATION -->
+        <section class="purchase-information">
+          <h3 class="section-header text-uppercase">Purchase Information</h3>
+          <div class="form-row">
+            <div class="col-lg-4">
+              <div class="form-group">
+                <label for="purchased_at">Place of Purchase</label>
+                <select class="custom-select" id="exampleFormControlSelect1">
+                  <option value="Best Buy">Best Buy</option>
+                  <option value="Costco">Costco</option>
+                  <option value="Walmart">Walmart</option>
+
+                </select>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="form-group">
+                <label for="purchase_date">Date of Purchase</label>
+                <input type="date" class="form-control" name="registration[purchase_date]" id="purchase_date">
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="form-group">
+                <label for="purchase_date">Purchase Price</label>
+                <input type="text" class="form-control registria_field mask-numerical" name="product[price_paid]" id="price_paid" placeholder="$0.00">
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- / PURCHASE INFORMATION -->
+
+        <!-- OPT IN MARKETING -->
+        <div class="row mt-3">
+          <div class="col-lg-12">
+          
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="myBtn" name="user[receive_product_update]" value="2" checked="checked">
+              <label for="myBtn" class="checkbox-opt-in-text custom-control-label"><p class="pl-1 pt-1  text-dark lg-regular">Yes! I'd like to receive relevant product information and savings only available via email.</p> </label>
+            </div>
+          </div>
+        </div>
+        <!-- / OPT IN MARKETING -->
+
+        <!-- The Modal -->
+          <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="text-center">Are you sure?</h3>
+
+              </div>
+              <span class="close" width='0'>&times;</span>
+              <div class="modal-body">
+                <div class="social-icon h3 mt-n4 text-center">
+                  <i class="fa fa-check text-secondary "></i>
+                </div>
+                
+
+                <p class="text-center">Opt in to receive exlusive offers and marketing</p>
+              </div>
+              <div class="col ">
+                <button class="col btn-tertiary btn-lg btn-block p text-primary">No thanks</button>
+                <button class="col btn btn-primary btn-lg btn-block h6">Opt me in</button>
+              </div>
+            </div>
+
+          </div>
+
+          <script>
+          // Get the modal
+          var modal = document.getElementById("myModal");
+
+          // Get the button that opens the modal
+          var btn = document.getElementById("myBtn");
+
+          // Get the <span> element that closes the modal
+          var span = document.getElementsByClassName("close")[0];
+
+          // When the user clicks the button, open the modal 
+          btn.onclick = function() {
+            modal.style.display = "block";
+          }
+
+          // When the user clicks on <span> (x), close the modal
+          span.onclick = function() {
+            modal.style.display = "none";
+          }
+
+          // When the user clicks anywhere outside of the modal, close it
+          window.onclick = function(event) {
+            if (event.target == modal) {
+              modal.style.display = "none";
+            }
+          }
+          </script>
+
+        <!-- SUBMIT REGISTRATION BUTTON -->
+        <div class="row submit-button justify-content-center">
+          <div class="col-lg-6">
+            <a href="https://standard_demo.registriaqa.com/pop" id="next_button" class="btn btn-primary btn-lg btn-block h6">Register</a>
+          </div>
+        </div>
+        <!-- / SUBMIT REGISTRATION BUTTON -->
+
+      </div>
+
+    </main>
+
+    <!-- FOOTER -->
+      <footer class="row aura-footer">
+        <div class="col-lg-12 text-center">
+          <p class="mb-4 text-center">
+            <a id="privacyPolicy" href="#privacyPolicy" class="text-primary"> Privacy Policy</a>&nbsp; | &nbsp; <a id="termsConditions"  href="#termsConditions" class="text-primary"> Terms &amp; Conditions</a></p>
+					<p class="mb-4 text-center">© 2021 Haven. All Rights Reserved.</p>
+
+            <div class="footer-social-icons d-flex mt-8 mt-md-0 justify-content-center ml-0 ml-md-auto">
+              <a class="social-icon h3 pl-md-2 pl-0 pr-2 pr-md-0 mb-0"
+                href="https://mktg.registria.com/l/399502/2017-10-26/ckldfq" target="_blank">
+                <i class="fa fa-facebook-square"></i> 
+              </a> 
+              <a class="social-icon h3 pl-md-2 pl-0 pr-2 pr-md-0 mb-0" href="https://mktg.registria.com/l/399502/2017-10-26/ckldgj" target="_blank">
+                <i class="fab fa-twitter-square" aria-hidden="true"></i>
+              </a>
+              <a class="social-icon h3 pl-md-2 pl-0 pr-2 pr-md-0 mb-0" href="https://mktg.registria.com/l/399502/2017-09-21/by41fj" target="_blank">
+                <i class="fab fa-youtube-square" aria-hidden="true"></i>
+              </a>
+              <a class="social-icon h3 pl-md-2 pl-0 pr-2 pr-md-0 mb-0" href="https://mktg.registria.com/l/399502/2017-10-26/ckldgb" target="_blank">
+                <i class="fab fa-linkedin" aria-hidden="true"></i>
+              </a>
+
+            </div>
+            
+          </div>
+        </div>
+      <!-- / FOOTER -->
+    
+    <script src="https://kit.fontawesome.com/b3555eb3a9.js" crossorigin="anonymous"></script>
+  </body>
+
+</html>

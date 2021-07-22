@@ -1,0 +1,395 @@
+<html lang="en" id="aura">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="csrf-param" content="authenticity_token">
+    <meta name="csrf-token" content="wCdh4aHdEtIywI37/t1T8MfQwdhflM2/+Wm/MUVIXj9S9HtLFT0zgP9GyN3Z5e70VKgR1mZYap1UflCMIYddiw==">
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/jquery-ui.min.js"></script>
+    <script src="scripts/jquery-ui-i18n.min.js"></script>
+    <script src="scripts/client.min.js"></script>
+    <script src="scripts/vendor.js"></script>
+    <script src="scripts/quickstart.js"></script>
+    <link rel="stylesheet" href="styles/standard.css">
+    <link rel="stylesheet" href="styles/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    <title>Haven</title>
+    <link rel="shortcut icon" href="img/favicon.png">
+  </head>
+  <body class="aura-override branded brand-kitchenaid-major" cz-shortcut-listen="true">
+    <div class="custom-header-html"></div>
+    <div class="aura-header-mast"></div>
+
+    <!-- CONTAINER -->
+    <div class="aura-container">
+    <form class="mb-0">
+
+      <!-- HEADER -->
+      <header class="aura-header">
+        <div class="d-flex align-items-center justify-content-center">
+          <img rv-src="aura.logo" alt="Speaker Speaker" class="logo">
+        </div>
+      </header>
+      <!-- / HEADER -->
+
+      <!-- STEPS -->
+      <div class="aura-content-container">
+        <div class="content">
+          <nav class="aura-steps">
+            <ul class="steps">
+
+              <!-- STEP 1 -->
+              <li class="step primary">
+                <svg><line x1="0" y1="0" x2="100%" y2="0" /></svg>
+                <svg><line x1="0" y1="0" x2="100%" y2="0" /></svg>
+              </li>
+              <li class="step primary">
+                <svg><circle cx="16" cy="16" r="15" stroke="#231f20" stroke-width="1" fill-opacity="0" /></svg>
+                <svg><circle cx="16" cy="16" r="15" stroke="#231f20" stroke-width="1" fill-opacity="0" /></svg>
+                <div>1</div>
+              </li>
+              <!-- / STEP 1-->
+
+              <!-- STEP 2 -->
+              <li class="step grey">
+                <svg><line x1="0" y1="0" x2="100%" y2="0" /></svg>
+                <svg><line x1="0" y1="0" x2="100%" y2="0" /></svg>
+              </li>
+              <li class="step grey">
+                <svg><circle cx="16" cy="16" r="15" stroke="#231f20" stroke-width="1" fill-opacity="0" /></svg>
+                <svg><circle cx="16" cy="16" r="15" stroke="#231f20" stroke-width="1" fill-opacity="0" /></svg>
+                <div>2</div>
+              </li>
+              <!-- / STEP 2-->
+
+              <!-- STEP 3 -->
+              <li class="step grey">
+                <svg><line x1="0" y1="0" x2="100%" y2="0" /></svg>
+                <svg><line x1="0" y1="0" x2="100%" y2="0" /></svg>
+              </li>
+              <li class="step grey">
+                <svg><circle cx="16" cy="16" r="15" stroke="#231f20" stroke-width="1" fill-opacity="0" /></svg>
+                <svg><circle cx="16" cy="16" r="15" stroke="#231f20" stroke-width="1" fill-opacity="0" /></svg>
+                <div>3</div>
+              </li>
+              <!-- / STEP 3 -->
+
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <!-- / STEPS -->
+
+      <!-- / MAIN CONTENT -->
+      <main class="aura-content">
+
+        <!-- PAGE HEADERS -->
+        <div class="aura-page-headers aura-content-container">
+          <div class="content">
+            <h1 class="page-header">Welcome back { aura.ownerFirstName }</h1>
+            <h5 class="page-subheader">{ aura.regSubheader }</h5>
+          </div>
+        </div>
+        <!-- / PAGE HEADERS -->
+
+        <!-- YOUR INFORMATION -->
+        <section class="registration-owner-information">
+          <h3 class="section-header text-uppercase">Your Information</h3>
+          <!-- OWNER INFORMATION -->
+          <section class="owner-information-details mt-4">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="content-box border-lighter">
+                  <div class="content-box-body">
+                    <!-- OWNER INFO CHECKBOX -->
+                    <div class="custom-control custom-checkbox mb-0">
+                      <input type="checkbox" class="custom-control-input" id="use-existing-owner-info" name="use-existing-owner-info" value="1" checked="checked">
+                      <label for="use-existing-owner-info" class="checkbox-opt-in-text custom-control-label" data-toggle="collapse" href="#owner-info" aria-expanded="false" aria-controls="ownerInfo">
+                        <p class="pt-1 text-light pb-0">Use this information to register</p>
+                      </label>
+                    </div>
+                    <!-- / OWNER INFO CHECKBOX -->
+                    <div class="recognized-owner-information">
+                      <dl class="row mb-0">
+                        <dt class="col-6">Name:</dt>
+                        <dd class="col-6">{ aura.ownerFirstName } {aura.ownerLastName }</dd>
+                      </dl>
+                      <dl class="row mb-0">
+                        <dt class="col-6">Email:</dt>
+                        <dd class="col-6">{ aura.ownerEmail }</dd>
+                      </dl>
+                      <dl class="row">
+                        <dt class="col-6">Phone:</dt>
+                        <dd class="col-6">{ aura.ownerPhone }</dd>
+                      </dl>
+                      <dl class="row">
+                        <dt class="col-6">Address:</dt>
+                        <dd class="col-6">{ aura.ownerAddress }<br>{ aura.ownerCity }, { aura.ownerState } { aura.ownerZip }</dd>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- /  OWNER INFORMATION -->
+          <div id="owner-info" class="owner-info collapse">
+            <div class="row">
+              <div class="col-12">
+                <div class="form-group">
+                  <label for="first_name">Full Name</label>
+                  <input type="text" id="full_name" class="form-control full-name" required="">
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-lg-6">
+                <div class="form-group"><label for="email">Email Address</label>
+                  <input class="form-control registria_field" id="email" name="user[email]" type="email" value="" required="">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group"><label for="phone">Phone Number</label>
+                  <input class="form-control registria_field mask-phone" id="phone" name="user[phone]" type="tel" value="" required="">
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <label for="address1">Street Address</label>
+                  <input class="form-control registria_field" id="address1" name="user[address_attributes][address1]" placeholder="Enter a location" type="text" required="">
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-lg-4">
+                <div class="form-group">
+                  <label for="city">City</label>
+                  <input class="form-control registria_field" id="city" name="user[address_attributes][city]" type="text" required="">
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="form-group">
+                  <label for="state">State</label>
+                  <input class="form-control registria_field autocomplete-state" id="state" name="user[address_attributes][state]" autocomplete="off" type="text" required="">
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="form-group">
+                  <label for="zip">ZIP Code
+                  </label> <input class="form-control registria_field" id="zip" name="user[address_attributes][zip]" type="tel" required="">
+                  <input class="form-control registria_field" id="country" name="user[address_attributes][country]" type="hidden" value="United States">
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- / YOUR INFORMATION -->
+
+        <!-- PRODUCT INFORMATION -->
+        <section class="registraion-product-information">
+        <h3 class="section-header text-uppercase">Product Information</h3>
+          <div class="form-row">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label for="model">Model Number</label>
+                <input type="text" autocomplete="off" class="form-control autocomplete-product registria_field" name="registration[model]" id="model" rv-value="aura.regModelNumber" data-model-string="{name} ({sku})" required="">
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label for="serial">Serial Number</label>
+                <input class="form-control registria_field" id="serial" name="registration[serial_number]" rv-value="aura.regSerialNumber" type="text">
+              </div>
+            </div>
+          </div>
+          <div class="model-finder">
+            <a href="#" data-toggle="modal" data-target="#model_serial_helper_modal">
+              <h6 class="text-primary lg-regular small pb-2">Can't Find Your Model/Serial Number?</h6>
+            </a>
+          </div>
+        </section>
+        <!-- / PRODUCT INFORMATION -->
+
+        <!-- PURCHASE INFORMATION -->
+        <section class="purchase-information">
+          <h3 class="section-header text-uppercase">Purchase Information</h3>
+          <div class="form-row">
+            <div rv-if="aura.regPlaceOfPurchase" class="col-lg-4">
+              <div class="form-group">
+                <label for="purchased_at">Place of Purchase</label>
+                <input type="text" class="form-control registria_field autocomplete-organizations" name="registration[purchased_at]" id="purchased_at" autocomplete="off" required="">
+                <div class="dropdown-menu retailer">
+                  <span class="dropdown-item">{ aura.regRetailer }</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="form-group">
+                <label for="purchase_date">Date of Purchase</label>
+                <input type="tel" class="form-control registria_field mask-date" name="registration[purchase_date]" id="purchase_date" required="">
+              </div>
+            </div>
+            <div rv-if="aura.regPurchasePrice" class="col-lg-4">
+              <div class="form-group">
+                <label for="purchase_date">Purchase Price</label>
+                <input type="tel" class="form-control registria_field mask-numerical" name="product[price_paid]" id="price_paid" required="" placeholder="xxxx.xx">
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- / PURCHASE INFORMATION -->
+
+        <!-- OPT IN MARKETING -->
+        <div class="row mt-3">
+          <div class="col-lg-12">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="receive_product_communication" name="user[receive_product_communication]" value="1" checked="checked">
+              <label for="receive_product_communication" class="checkbox-opt-in-text custom-control-label"><p class="pl-1 pt-1  text-dark lg-regular">Sign me up to receive product tips &amp; tricks, special offers and more.</p> </label>
+            </div>
+          </div>
+        </div>
+        <!-- / OPT IN MARKETING -->
+
+        <!-- EXTRA CHECKBOXES -->
+        <div rv-if="aura.regReceiveSmsCheckbox" class="row">
+          <div class="col-lg-12">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="receive_mobile_communication" name="user[receive_mobile_communication]" value="1">
+              <label for="receive_mobile_communication" class="checkbox-opt-in-text custom-control-label"><p class="pl-1 pt-1 text-dark lg-regular">I would like to receive mobile phone SMS messages about Speaker Speaker product support how-to and maintenance. Message and data rates may apply depending upon your mobile service plan.</p> </label>
+            </div>
+          </div>
+        </div>
+        <!--<div rv-if="aura.regDataPolicyCheckbox" class="row  pt-1" style="background-color: rgba(187, 187, 187, .15);">
+          <div class="col-lg-12">
+            <div class="custom-control custom-checkbox pt-2">
+              <input type="checkbox" class="custom-control-input" id="data_protection" name="user[data_protection]" value="1">
+              <label for="data_protection" class="checkbox-opt-in-text custom-control-label"><p class="pl-1 pt-1  text-dark lg-regular">I agree with the data protection policy. <span class="text-primary">Read policy</span>.</p> </label>
+            </div>
+          </div>
+        </div>-->
+        <!-- / EXTRA CHECKBOXES -->
+
+        <!-- SUBMIT REGISTRATION BUTTON -->
+        <div class="row submit-button justify-content-center">
+          <div class="col-lg-6">
+            <input type="hidden" name="_method" value="POST">
+            <input class="registria_field" name="authenticity_token" value="wCdh4aHdEtIywI37/t1T8MfQwdhflM2/+Wm/MUVIXj9S9HtLFT0zgP9GyN3Z5e70VKgR1mZYap1UflCMIYddiw==" type="hidden">
+            <a href="pop.html" id="next_button" class="btn btn-primary btn-lg btn-block h6">Submit Registration</a>
+          </div>
+        </div>
+        <!-- / SUBMIT REGISTRATION BUTTON -->
+
+      </main>
+      <!-- / MAIN CONTENT -->
+
+      <!-- FOOTER -->
+      <footer class="row aura-footer">
+        <div class="col-lg-12 text-center">
+          <p class="mb-4 text-center">
+            <a id="privacyPolicy" href="#privacyPolicy" class="text-primary"> Privacy Policy</a>&nbsp; | &nbsp; <a id="termsConditions"  href="#termsConditions" class="text-primary"> Terms &amp; Conditions</a></p>
+					<p class="mb-4 text-center">© 2020 { aura.copyright }. All Rights Reserved.</p>
+            <div
+              class="footer-social-icons d-flex mt-8 mt-md-0 justify-content-center ml-0 ml-md-auto">
+              <a class="social-icon h3 pl-md-2 pl-0 pr-2 pr-md-0 mb-0"
+                href="https://mktg.registria.com/l/399502/2017-10-26/ckldfq" target="_blank"><i
+                  class="fab fa-facebook-square" aria-hidden="true"></i> </a> <a
+                class="social-icon h3 pl-md-2 pl-0 pr-2 pr-md-0 mb-0"
+                href="https://mktg.registria.com/l/399502/2017-10-26/ckldgj" target="_blank"><i
+                  class="fab fa-twitter-square" aria-hidden="true"></i> </a> <a
+                class="social-icon h3 pl-md-2 pl-0 pr-2 pr-md-0 mb-0"
+                href="https://mktg.registria.com/l/399502/2017-09-21/by41fj" target="_blank"><i
+                  class="fab fa-youtube-square" aria-hidden="true"></i> </a> <a
+                class="social-icon h3 pl-md-2 pl-0 pr-2 pr-md-0 mb-0"
+                href="https://mktg.registria.com/l/399502/2017-10-26/ckldgb" target="_blank"><i class="fab fa-linkedin"
+                  aria-hidden="true"></i> </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <div class="custom-footer-html"></div>
+
+    </form>
+    </div>
+    <!-- / CONTAINER -->
+
+	  <!-- MODAL - MODEL / SERIAL NUMBER -->
+		<div id="model_serial_helper_modal" class="modal fade m-warranty" tabindex="-1" role="dialog" aria-labelledby="model_serial_helper_modalLabel" aria-hidden="true">
+      <div class="modal-dialog p-2" role="document">
+        <!-- Modal content -->
+        <div class="modal-content modal-content-pro">
+          <div class="modal-header">
+            <h3 class="modal-title lg-semibold text-primary" id="exampleModalLabel">Find Your Model &amp; Serial Number</h3>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <div class="modal-body">
+            <p>Select a Product Category</p>
+            <!-- Example single danger button -->
+            <div id="search-menu">
+              <div class="btn-group mb-3 position-relative">
+                <button id="product-button" type="button" class="btn btn-outline-light btn-block btn-icon btn-icon-right modal_dropdown" data-toggle="dropdown" title="Product">
+                  <span class="dropdown-text">Appliances</span>
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <ul class="dropdown-menu scrollable-menu w-100" role="menu" id="category-dropdown" title="Category">
+                  <li data-cat="mobile"><a class="dropdown-item" href="#">Mobile</a></li>
+                  <li data-cat="tv_audio_video"><a class="dropdown-item" href="#">TV/Audio/Video</a></li>
+                  <li data-cat="appliances"><a class="dropdown-item" href="#">Appliances</a></li>
+                  <li data-cat="computers"><a class="dropdown-item" href="#">Computers</a></li>
+                  <li data-cat="commercial_display"><a class="dropdown-item" href="#">Commercial Display</a></li>
+                  <li data-cat="solar"><a class="dropdown-item" href="#">Solar</a></li>
+                </ul>
+              </div>
+              <div class="btn-group product-button mb-3 position-relative">
+                <button id="product-button" type="button" class="btn btn-outline-light btn-block btn-icon btn-icon-right modal_dropdown" data-toggle="dropdown" title="Product">
+                  <span class="dropdown-text">Refrigerators</span>
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <ul class="dropdown-menu scrollable-menu w-100" role="menu" id="product-dropdown" title="Product">
+                  <li><a class="dropdown-item" href="#">Air Conditioners</a></li>
+                  <li><a class="dropdown-item" href="#">Cooking Appliances</a></li>
+                  <li><a class="dropdown-item" href="#">Dishwashers</a></li>
+                  <li><a class="dropdown-item" href="#">Dryers</a></li>
+                  <li><a class="dropdown-item" href="#">Refrigerators</a></li>
+                  <li><a class="dropdown-item" href="#">Washers</a></li>
+                </ul>
+              </div>
+              <hr />
+              <div class="row mb-3">
+                <div class="col-6 mx-auto">
+                  <img id="product_image" src="img/lg-fridge.jpg" class="img-fluid" data-pagespeed-url-hash="788616019" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                </div>
+              </div>
+              <div class="dropdown_instructions">
+							<p>The model and/or serial number may be found <br>in the following location:</p>
+              <p class="mb-1">- Open the refrigerator door.</p>
+              <p class="mb-1">- Look on the inside, right wall.</p>
+								</div>
+            </div>
+          </div>
+          <div class="modal-footer py-1">
+            <button id="cancel" data-reg="1509113" class="btn btn-link" type="button" data-line-number="" class="close" data-dismiss="modal" aria-label="Close">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- / MODAL -->
+
+    <script src="scripts/popper.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+
+    <script src="scripts/rivets.js"></script>
+    <script src="scripts/demo.js"></script>
+    <script>
+      rivets.binders['set-class'] = function(el, value){
+        el.className += ' '+ value;
+      }
+    </script>
+
+  </body>
+</html>

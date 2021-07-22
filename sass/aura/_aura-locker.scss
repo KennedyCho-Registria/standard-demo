@@ -1,0 +1,89 @@
+html, body{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+.locker-header{
+    // background-image: url('https://d3d2px1in9aet5.cloudfront.net/system/images/images/6034/original/Haven-Banner.jpg?1624305061');
+	// width: 100%;
+    // background-color: grey;
+	height: 20%;
+    min-height: 40px;
+	// max-height: 40vh;
+	// height: auto;
+	padding-top:10px;
+	// padding-left: 10px;
+	// padding-right: 10px;
+    box-shadow: 0.5px 0.5px 20px 6px #ccc;
+}
+
+.locker-logo{
+    height: 3vh;
+    min-height: 25px;
+    margin-left: 5%;
+    margin-bottom: 3%;
+    margin-top: 3%;
+}
+
+.locker-account{
+    font-size: xx-large;
+    margin-right: 5%;
+    color: $primary !important;
+}
+
+.locker-banner{
+    background-image: url('https://d3d2px1in9aet5.cloudfront.net/system/images/images/6034/original/Haven-Banner.jpg?1624305061');
+	// width: 100%;
+	// min-height: 80px;
+    // height: 30%
+	// max-height: 40vh;
+	// height: auto;
+	padding-top:20px;
+    padding-bottom: 20px;
+	// padding-left: 5%;
+	// padding-right: 5%;
+}
+
+#carouselExampleControls{
+    margin-top: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 100px;
+}
+
+.lock-group{
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+
+.locker-btn{
+    margin-bottom: 10px;
+    
+    
+    
+    background-color: $primary !important;
+    border-color: $primary !important;
+    color: $tertiary;
+}
+
+.caption{
+    text-align: center;
+}
+
+.progress{
+    background-color: green !important;
+    width: 100% !important;
+    // height: 50px !important;
+}
+
+.progress-bar{
+    background-color: red !important;
+    width: 80px;
+
+}
+
+.progress-bar2{
+    background-color: red !important;
+    width: 100%;
+}

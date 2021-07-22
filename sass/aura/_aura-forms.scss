@@ -1,0 +1,247 @@
+
+
+.form-help {
+	margin-bottom: $form-group-margin-bottom;
+}
+
+.form-group {
+	margin-bottom: $form-group-margin-bottom;
+	position: relative;
+
+	// Styles Form Placeholder Text
+	::-webkit-input-placeholder{
+		font-size: $font-size-sm;
+		color: $lighter;
+	}
+	
+	.geo-trigger{
+		top: 40px;
+    right: 10px;
+		position: absolute;
+		font-size: $font-size-base;
+	}
+
+	> label {
+		width: 100%;
+		margin-bottom: 0;
+
+		span.label-text {
+			font-size: $font-size-xs;
+			color: $light;
+			margin-bottom: $spacer-2;
+			display: inline-block;
+			font-weight: $font-weight-light;
+		}
+	}
+
+	.form-control{
+		background: $input-gradient;
+		background-color: $faint;
+		border: 1px solid $lighter;
+		outline: none;
+		outline-style:none;
+		box-shadow:none;
+		height: 40px;
+
+		&.invalid{
+			border-color: $danger;
+		}
+
+		+label.invalid{
+			color:  $danger;
+			position: absolute;
+			right: 0;
+			font-size: $font-size-xs - 0.1rem;
+		}
+
+		&:focus{
+			border-color: $primary;
+			outline: none;
+			outline-style:none;
+			box-shadow:none;
+		}
+
+		+ .form-helper-text{
+			margin-top: $spacer-4;
+			font-size: $font-size-xs;
+			color: $dark;
+			font-style: italic;
+
+			a{
+				font-size: $font-size-xs;
+				color: $info;
+			}
+		}
+
+		
+  }
+  
+  .checkbox-opt-in-text{
+    color:  $text-light;
+    font-size: $font-size-sm;
+	}
+
+	.custom-file-input:focus~.custom-file-label {
+    border-color: $custom-file-border-color;
+    box-shadow: none;
+  }
+	
+	.custom-file-label{
+		font-size: $font-size-base;
+
+		&:after{
+			cursor: pointer;
+		}
+	}
+
+	.custom-select{
+		@extend .form-control;
+		background: $faint;
+  	background: $custom-select-indicator; /* fallback */
+  	background: $custom-select-arrows, $input-gradient; /* W3C */
+	}
+
+	.form-icon i{
+		color: $primary;
+	}
+}
+
+.input-group>.custom-file {
+
+	&:not(:last-child) .custom-file-label, &:not(:last-child) .custom-file-label::after {
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+
+	.custom-file-label{
+		border-right: none;
+		color: $light;
+	}
+}
+
+.custom-file-input-group-append .input-group-text{
+	background-color: $white;
+	color: $custom-file-border-color;
+}
+
+.custom-file-label::after{
+	display: none;
+}
+
+.frauto-list {
+	@extend .dropdown-menu;
+	width: 100%;
+
+	& li{
+		@extend .dropdown-item;
+
+		&:hover{
+			cursor: pointer;
+		}
+	}
+}
+
+.item.custom-control-label{
+	
+	&::before, &::after{
+		top: initial;
+		left: -$spacer-6;
+	}
+}
+
+.custom-control{
+
+	.custom-control-label{
+		cursor: pointer;
+		font-size: $font-size-sm;
+	}
+}
+
+//Changes label when radio button is selected
+input[type=radio]:checked + label {
+	// color: $primary;
+	font-weight: $font-weight-normal;
+} 
+
+//Changes label when checkbox is selected
+input[type=checkbox]:checked + label {
+	color: $dark;
+	font-weight: $font-weight-normal;
+
+	&.checked-primary{
+		color: $primary;
+	}
+} 
+
+.custom-control-input:focus{
+
+	~ .custom-control-label::before {
+		box-shadow: none;
+	}
+
+	&:not(:checked) ~ .custom-control-label::before{
+		border-color:  $primary;
+	}
+}
+
+.custom-checkbox .custom-control-label::before {
+	@if $enable-rounded {
+    // Manually use the if/else instead of the mixin to account for iOS override
+    border-radius: $checkbox-border-radius;
+  } @else {
+    // Otherwise undo the iOS default
+    border-radius: 0;
+	}
+}
+
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::after{
+	@if $light-theme {
+		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='#333' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
+	}
+}
+
+.custom-radio .custom-control-input:checked ~ .custom-control-label::after{
+	@if $light-theme {
+		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='#333'/%3E%3C/svg%3E");
+	}
+}
+
+.custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+	color: $white;
+	background-color: $primary;
+	border-color: $primary;
+}
+
+select {
+	-webkit-appearance: none; 
+	-moz-appearance: none;
+	appearance: none;       /* remove default arrow */
+}
+
+#map {
+  height: 1px;
+  width: 1px;
+}
+
+#infowindow-content {
+  display: none;
+}
+
+#infowindow-content img {
+  width: $spacer-8;
+  height: $spacer-8;
+}
+
+#map #infowindow-content {
+  display: inline;
+}
+
+.pac-logo::after {
+  display: none;
+}
+
+#full_address_label {
+  margin-left: $spacer-4;
+  color: #C7001B;
+  font-size: $font-size-sm;
+}

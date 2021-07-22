@@ -1,0 +1,35 @@
+.logo{
+	max-height: 100px;
+	max-width: 200px;
+}
+
+.card-logos img {
+	width: 50%;
+}
+
+.pr-logo {
+	position: absolute;
+	bottom: $spacer-8;
+	right: $spacer-8;
+	max-height: 35px;
+	max-width: 60px;
+
+	img{
+		max-height: 35px;
+	}
+}
+
+.video-wrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+
+	iframe{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}

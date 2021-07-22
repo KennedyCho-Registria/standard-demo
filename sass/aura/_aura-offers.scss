@@ -1,0 +1,151 @@
+.merchandise-offers{
+	flex-flow: row nowrap;
+	margin-right: -$spacer-8;
+	margin-left: -$spacer-8;
+	display: flex;
+	justify-content: center;
+
+	.merchandise-offer{
+		display: -ms-flexbox;
+    display: flex;
+    -ms-flex: 0 1 33.33333%;
+    flex: 0 1 33.33333%;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-right: $spacer-4;
+    margin-bottom: 0;
+		margin-left: $spacer-4;
+		border: 1px dashed $light;
+		padding: $spacer-8;
+		@if $enable-rounded {
+			// Manually use the if/else instead of the mixin to account for iOS override
+			border-radius: $merchandise-offer-border-radius;
+		} @else {
+			// Otherwise undo the iOS default
+			border-radius: 0;
+		}
+
+		&:hover{
+			text-decoration: none;
+		}
+
+		.merchandise-desc{
+			text-align: center;
+		}
+
+		.merchandise-img{
+			min-height: 136px;
+			max-height: 200px;
+			object-fit: contain;
+			width: 100%;
+		}
+
+		.merchandise-price{
+			text-align: center;
+			margin-bottom: $spacer-8;
+		}
+
+		img{
+			max-width: 136px;
+			margin: $spacer-8 auto;
+		}
+
+		.best-value{
+			text-transform: uppercase;
+			font-size: $font-size-sm;
+			//font-weight: $font-weight-bold;
+			@if $light-theme {
+				color: $text-dark;
+			} @else {
+				color: $primary;
+			}
+		}
+
+		.merchandise-title{
+			//font-weight: $font-weight-bold;
+			font-size: $h5-font-size;
+		}
+
+		.merchandise-subtitle{
+			line-height: 1.25rem;
+			margin: 0;
+		}
+
+		.merchandise-button{
+			margin-top: $spacer-8;
+		}
+
+		&.active{
+			border: 1px solid transparent;
+			box-shadow: 0 0 0pt 2pt $primary;
+
+			.checkbox-add-to-cart-text{
+				color: $primary;
+			}
+		}
+	}
+}
+
+.esp{
+
+	.custom-control:first-child{
+		padding-bottom: $spacer-4;
+		padding-top: $spacer-4;
+		background-color: $lightest;
+	}
+}
+
+.esp-benefits-item{
+	display: flex;
+	align-items: left;
+	flex-direction: row;
+
+	.esp-benefits-item-icon{
+		font-size: $font-size-xl;
+		color: $primary;
+		margin-right: $spacer-6;
+		margin-bottom: $spacer-4;
+	}
+
+	.esp-benefits-item-text{
+		font-size: $font-size-sm;
+		max-width: 168px !important;
+	}
+}
+
+@include media-breakpoint-down(md) {
+	.merchandise-offers {
+		flex-flow: row wrap;
+
+		.merchandise-offer{
+			flex: 1 1 100%;
+			margin-bottom: $spacer-8;
+
+			&:last-of-type{
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.esp_price{
+	text-align: right;
+  }
+  
+#esp_01:hover{
+	background-color: rgba(39, 70, 144, 0.95);
+	color: $tertiary;
+}
+
+#esp_02:hover{
+	background-color: rgba(39, 70, 144, 0.95);
+	color: $tertiary;
+	.esp_note{
+		color: $tertiary;
+	}
+}
+
+#esp_03:hover{
+	background-color: rgba(39, 70, 144, 0.95);
+	color: $tertiary;
+}

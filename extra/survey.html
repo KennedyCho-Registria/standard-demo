@@ -1,0 +1,290 @@
+<html lang="en" id="aura">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="csrf-param" content="authenticity_token">
+    <meta name="csrf-token" content="wCdh4aHdEtIywI37/t1T8MfQwdhflM2/+Wm/MUVIXj9S9HtLFT0zgP9GyN3Z5e70VKgR1mZYap1UflCMIYddiw==">
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/jquery-ui.min.js"></script>
+    <script src="scripts/jquery-ui-i18n.min.js"></script>
+    <script src="scripts/client.min.js"></script>
+    <script src="scripts/vendor.js"></script>
+    <script src="scripts/quickstart.js"></script>
+    <link rel="stylesheet" href="styles/standard.css">
+    <link rel="stylesheet" href="styles/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    <title>Haven</title>
+    <link rel="shortcut icon" href="img/favicon.png">
+  </head>
+  <body class="aura" cz-shortcut-listen="true">
+    <div class="custom-header-html"></div>
+    <div class="aura-header-mast"></div>
+
+    <!-- CONTAINER -->
+    <div class="aura-container">
+    <form class="mb-0">
+
+      <!-- HEADER -->
+      <header class="aura-header">
+        <div class="dropdown nav-wrap text-right">
+          <a class="btn btn-sm nav-dropdown text-primary text-uppercase pb-0">
+            Language 
+            <span><i class="fal fa-angle-down"></i></span>
+          </a>
+          <div class="dropdown-menu language-select" style="overflow: hidden; display: none;"> 
+            <p class="dropdown-item langauge mb-0 pb-0" rv-each-language="aura.languages">{ language.name }</p> 
+            <!--p class="dropdown-item langauge mb-0 pb-0">ES</p>
+            <p class="dropdown-item langauge mb-0">FR</p--> 
+          </div>
+        </div>
+        <div class="d-flex align-items-center justify-content-center">
+          <img rv-src="aura.logo" alt="Speaker Speaker" class="logo">
+        </div>
+      </header>
+      <!-- / HEADER -->
+      
+      <!-- STEPS -->
+      <div class="aura-content-container">
+        <div class="content">
+          <nav class="aura-steps">
+            <ul class="steps">
+
+              <!-- STEP 1 -->
+              <li class="step primary">
+                <svg><line x1="0" y1="0" x2="100%" y2="0" /></svg>
+                <svg><line x1="0" y1="0" x2="100%" y2="0" /></svg>
+              </li>
+              <li class="step primary">
+                <svg><circle cx="16" cy="16" r="15" stroke="#231f20" stroke-width="1" fill-opacity="0" /></svg>
+                <svg><circle cx="16" cy="16" r="15" stroke="#231f20" stroke-width="1" fill-opacity="0" /></svg>
+                <div><i class="fal fa-check"></i></div>
+              </li>
+              <!-- / STEP 1-->
+
+              <!-- STEP 2 -->
+              <li class="step primary">
+                <svg><line x1="0" y1="0" x2="100%" y2="0" /></svg>
+                <svg><line x1="0" y1="0" x2="100%" y2="0" /></svg>
+              </li>
+              <li class="step primary">
+                <svg><circle cx="16" cy="16" r="15" stroke="#231f20" stroke-width="1" fill-opacity="0" /></svg>
+                <svg><circle cx="16" cy="16" r="15" stroke="#231f20" stroke-width="1" fill-opacity="0" /></svg>
+                <div>2</div>
+              </li>
+              <!-- / STEP 2-->
+
+              <!-- STEP 3 -->
+              <li class="step grey">
+                <svg><line x1="0" y1="0" x2="100%" y2="0" /></svg>
+                <svg><line x1="0" y1="0" x2="100%" y2="0" /></svg>
+              </li>
+              <li class="step grey">
+                <svg><circle cx="16" cy="16" r="15" stroke="#231f20" stroke-width="1" fill-opacity="0" /></svg>
+                <svg><circle cx="16" cy="16" r="15" stroke="#231f20" stroke-width="1" fill-opacity="0" /></svg>
+                <div>3</div>
+              </li>
+              <!-- / STEP 3 -->
+
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <!-- / STEPS -->
+
+      <!-- MAIN CONTENT -->				
+      <main class="aura-content">
+
+        <!-- PAGE HEADERS -->
+        <div class="aura-page-headers aura-content-container">
+          <div class="content">
+            <h1 class="page-header">Are you planning to make any other 
+appliance upgrades in the coming year?</h1>
+          </div>
+        </div>
+        <!-- / PAGE HEADERS -->
+        
+        <!-- CART -->
+        <section class="cart">
+          <div class="aura-content-container">
+            <div class="content-sm">
+
+              <!-- SURVEY -->
+              <div class="content-box border-none">
+                <div class="content-box-body">
+                  <h3 class="section-header">Check All That Apply</h3>
+                  <div class="row">
+                  <!-- SURVEY CHECKBOX LOOP -->
+                  <div class="col-6" rv-each-checkbox="aura.surveyItem">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" rv-id="checkbox.name" name="user[receive_mobile_communication]" value="1">
+                      <label rv-for="checkbox.name" class="checkbox-opt-in-text custom-control-label"><p class="pl-1 pt-1">{ checkbox.label }</p> </label>
+                    </div>
+                  </div>
+                    <!-- / SURVEY CHECKBOX LOOP -->
+                </div>
+                </div>
+              </div>
+          </div>
+
+        </section>
+        <!-- / SURVEY -->
+
+        <!-- SUBMIT / SKIP BUTTONS-->
+          <div class="row submit-button justify-content-center">
+            <div class="col-lg-6">
+              <a href="esp.html" class="btn btn-primary btn-lg btn-block h6">Submit</a>
+              <a href="esp.html" class="mt-3 btn btn-outline-primary btn-block btn-lg h6">Skip <!--<i class="fa fa-angle-right"></i>--></a>
+            </div>
+          </div>
+        <!-- / SUBMIT / SKIP BUTTONS -->
+
+      </main>
+      <!-- / MAIN CONTENT -->
+
+      <!-- FOOTER -->
+      <footer class="row aura-footer">
+        <div class="col-lg-12 text-center">
+          <p class="mb-4 text-center">
+            <a id="privacyPolicy" href="#privacyPolicy" class="text-primary"> Privacy Policy</a>&nbsp; | &nbsp; <a id="termsConditions"  href="#termsConditions" class="text-primary"> Terms &amp; Conditions</a></p>
+					<p class="mb-4 text-center">© 2020 { aura.copyright }. All Rights Reserved.</p>
+            <!-- FINE PRINT -->
+            <p rv-if="aura.finePrint" class="fine-print text-center mx-20 mt-2">
+              { aura.finePrintText }
+            </p>
+          <!-- / FINE PRINT -->
+         </div>
+      </footer>
+      <!-- / FOOTER -->
+
+      <div class="custom-footer-html"></div>
+
+    </form>
+    </div>
+    <!-- / CONTAINER -->
+
+    <!-- MODAL - EDIT ESP -->
+    <div id="editPlan" class="modal fade m-warranty" tabindex="-1" role="dialog" aria-labelledby="editPlanLabel" aria-hidden="true">
+      <div class="modal-dialog p-2" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="exampleModalLabel">Edit Your Plan</h3>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- ESP RADIOS -->
+            <div class="list mb-0 align-items-center">
+              <!-- ESP OPTIONS LOOP -->
+              <div class="custom-control custom-radio mb-0" rv-each-option="aura.espOptions">
+                <input type="radio" rv-id="option.id" name="customRadio" class="custom-control-input">
+                <label class="item item-no-border custom-control-label pb-0" class="custom-control-label" rv-for="option.id">
+                  <div class="item-inner">
+                    <div class="input-wrapper">
+                      <div class="item-label">
+                        <h5 class="mb-1 font-weight-normal p" rv-class-font-size-1="option.isBold" rv-class-font-weight-bold="option.isBold">{ option.title }</h5>
+                        <h5 rv-if="option.hasValue" class="item-desc text-primary text-uppercase mt-0 pb-1">{ option.value }</h5>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item-end text-right">
+                    <h5 rv-class-font-weight-bold="option.isBold" rv-class-font-size-1="option.isBold" class="mb-1 font-weight-normal p">{ option.price}</h5>
+                    <h5 rv-if="option.hasMsrp" class="mb-0 text-light"><s>{ option.msrp }</s></h5>
+                  </div>
+                </label>
+              </div>
+              <!-- / ESP OPTIONS LOOP -->
+              <div class="custom-control custom-radio mb-0">
+                <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+                <label class="item item-no-border custom-control-label pb-0" class="custom-control-label" for="customRadio3">
+                  <div class="item-inner">
+                    <div class="input-wrapper">
+                      <div class="item-label">
+                        <h5 class="mb-0 font-weight-normal p">I purchased a plan with my product</h5>
+                      </div>
+                    </div>
+                  </div>
+                </label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input">
+                <label class="item item-no-border custom-control-label pb-0" class="custom-control-label" for="customRadio4">
+                  <div class="item-inner">
+                    <div class="input-wrapper">
+                      <div class="item-label">
+                        <h5 class="mb-0 font-weight-normal p">No thanks, not right now.</h5>
+                      </div>
+                    </div>
+                  </div>
+                </label>
+              </div>
+            </div>
+            <!-- / ESP RADIOS -->
+          </div>
+          <div class="modal-footer">
+            <button id="cancel" data-reg="1509113" class="btn btn-link" type="button" data-line-number="" class="close" data-dismiss="modal" aria-label="Close">Cancel</button>
+            <button id="save" data-reg="1509113" class="btn btn-primary" type="button" data-line-number="" class="close" data-dismiss="modal" style="max-height: 32px; line-height: 18px">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- MODAL - EDIT ESP -->
+
+    <!-- MODAL - EDIT MERCHANDISE -->
+    <div id="editMerch" class="modal fade m-warranty" tabindex="-1" role="dialog" aria-labelledby="editMerchLabel" aria-hidden="true">
+      <div class="modal-dialog p-2" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="exampleModalLabel">Edit Your Merchandise</h3>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="list mb-0 align-items-center">
+              <!-- Merchandise Loop -->
+              <div class="custom-control custom-checkbox" rv-each-merch="aura.merchandiseOffers">
+                <input type="checkbox" rv-id="merch.id" name="customCheckbox" class="custom-control-input">
+                <label class="item item-no-border custom-control-label pt-2" class="custom-control-label" rv-for="merch.id">
+                  <div class="item-inner">
+                    <div class="input-wrapper">
+                      <div class="item-label">
+                        <h5 class="mb-0 p font-weight-normal">{ merch.title}</h5>
+                        <p class="item-desc text-primary text-uppercase mt-0">{ merch.bestValue }</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item-end">
+                    <p class="mb-0 font-weight-bold">{ merch.price }</p>
+                    <p class="mb-0 text-light"><s>{ merch.msrp }</s></p>
+                  </div>
+                </label>
+              </div>
+              <!-- / Merchandise Loop -->
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button id="cancel" data-reg="1509113" class="btn btn-link" type="button" data-line-number="" class="close" data-dismiss="modal" aria-label="Close">Cancel</button>
+            <button id="save" data-reg="1509113" class="btn btn-primary" type="button" data-line-number="" class="close" data-dismiss="modal" style="max-height: 32px; line-height: 18px">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="scripts/popper.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+
+    <script src="scripts/rivets.js"></script>
+    <script src="scripts/demo.js"></script>
+    <script>
+      rivets.binders['set-class'] = function(el, value){
+        el.className += ' '+ value;   
+      }
+    </script>
+
+    <script>
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+      })
+    </script>
+  </body>
+</html>

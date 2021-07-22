@@ -1,0 +1,57 @@
+.content-box {
+  border: 1px solid $dark;
+  @if $enable-rounded {
+    // Manually use the if/else instead of the mixin to account for iOS override
+    border-radius: $content-box-border-radius;
+  } @else {
+    // Otherwise undo the iOS default
+    border-radius: 0;
+  }
+
+  &.border-none {
+    border: none;
+
+    .content-box-body {
+      padding: 0;
+    }
+  }
+
+  .content-box-header {
+    padding: $spacer-2 $spacer-8 $spacer-2;
+    @if $enable-rounded {
+      // Manually use the if/else instead of the mixin to account for iOS override
+      border-top-left-radius: $content-box-border-radius - 0.1rem;
+      border-top-right-radius: $content-box-border-radius - 0.1rem;
+    } @else {
+      // Otherwise undo the iOS default
+      border-radius: 0;
+    }
+
+    .content-box-header-title {
+      font-weight: $font-weight-normal;
+    }
+  }
+
+  .content-box-body {
+    padding: $spacer-8;
+    position: relative;
+
+    .custom-control {
+      margin-bottom: $spacer-6;
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+
+    dl,
+    dt,
+    dd {
+      font-size: $font-size-xs;
+      margin-bottom: $spacer-2;
+    }
+  }
+
+  .content-box-footer {
+  }
+}

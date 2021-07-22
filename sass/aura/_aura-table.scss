@@ -1,0 +1,16 @@
+.table{
+
+  &.table-sm.border-none{
+
+		th{
+			border-bottom: none;
+			border-top: none;
+		}
+
+		td{
+			border-top: none;
+			font-size: $font-size-sm;
+		}
+		
+	}
+}

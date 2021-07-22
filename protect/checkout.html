@@ -1,0 +1,266 @@
+<html lang="en" id="aura">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="csrf-param" content="authenticity_token">
+    <meta name="csrf-token" content="wCdh4aHdEtIywI37/t1T8MfQwdhflM2/+Wm/MUVIXj9S9HtLFT0zgP9GyN3Z5e70VKgR1mZYap1UflCMIYddiw==">
+    <script src="../scripts/jquery.min.js"></script>
+    <script src="../scripts/jquery-ui.min.js"></script>
+    <script src="../scripts/jquery-ui-i18n.min.js"></script>
+    <script src="../scripts/client.min.js"></script>
+    <script src="../scripts/vendor.js"></script>
+    <script src="../scripts/quickstart.js"></script>
+    <link rel="stylesheet" href="../styles/standard.css">
+    <link rel="stylesheet" href="../styles/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    <title>Haven</title>
+    <link rel="shortcut icon" href="../img/favicon.png">
+  </head>
+  <body class="aura" cz-shortcut-listen="true">
+    <div class="custom-header-html"></div>
+    <div class="aura-header-mast"></div>
+
+    <!-- CONTAINER -->
+    <div class="aura-container">
+    <form class="mb-0">
+
+      <!-- HEADER -->
+      <header class="aura-header">
+        <div class="d-flex align-items-center justify-content-center">
+          <img rv-src="aura.logo" alt="Speaker Speaker" class="logo">
+        </div>
+      </header>
+      <!-- / HEADER -->
+
+      <!-- STEPS -->
+      <div class="aura-content-container">
+        <div class="content">
+          <nav class="aura-steps">
+            <ul class="steps">
+
+              <!-- STEP 1 -->
+              <li class="step primary">
+                <svg><line x1="0" y1="0" x2="100%" y2="0" /></svg>
+                <svg><line x1="0" y1="0" x2="100%" y2="0" /></svg>
+              </li>
+              <li class="step primary">
+                <svg><circle cx="16" cy="16" r="15" stroke="#231f20" stroke-width="1" fill-opacity="0" /></svg>
+                <svg><circle cx="16" cy="16" r="15" stroke="#231f20" stroke-width="1" fill-opacity="0" /></svg>
+                <div><i class="fal fa-check"></i></div>
+              </li>
+              <!-- / STEP 1-->
+
+              <!-- STEP 2 -->
+              <li class="step primary">
+                <svg><line x1="0" y1="0" x2="100%" y2="0" /></svg>
+                <svg><line x1="0" y1="0" x2="100%" y2="0" /></svg>
+              </li>
+              <li class="step primary">
+                <svg><circle cx="16" cy="16" r="15" stroke="#231f20" stroke-width="1" fill-opacity="0" /></svg>
+                <svg><circle cx="16" cy="16" r="15" stroke="#231f20" stroke-width="1" fill-opacity="0" /></svg>
+                <div>2</div>
+              </li>
+              <!-- / STEP 2-->
+
+              <!-- STEP 3 -->
+              <li class="step grey">
+                <svg><line x1="0" y1="0" x2="100%" y2="0" /></svg>
+                <svg><line x1="0" y1="0" x2="100%" y2="0" /></svg>
+              </li>
+              <li class="step grey">
+                <svg><circle cx="16" cy="16" r="15" stroke="#231f20" stroke-width="1" fill-opacity="0" /></svg>
+                <svg><circle cx="16" cy="16" r="15" stroke="#231f20" stroke-width="1" fill-opacity="0" /></svg>
+                <div>3</div>
+              </li>
+              <!-- / STEP 3 -->
+
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <!-- / STEPS -->
+
+      <!-- MAIN CONTENT -->
+      <main class="aura-content">
+
+        <!-- PAGE HEADERS -->
+        <div class="aura-page-headers aura-content-container">
+          <div class="content">
+            <h1 class="page-header">Let's Checkout Now</h1>
+          </div>
+        </div>
+        <!-- / PAGE HEADERS -->
+
+        <div class="aura-content-container">
+          <div class="content">
+            <div class="content-box border-none">
+              <div class="content-box-body">
+                <h3 class="section-header">Payment Information</h3>
+                <!-- BILLING ADDRESS CHECKBOX -->
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="receive_product_communication" name="user[receive_product_communication]" value="1" checked="checked">
+                  <label for="receive_product_communication" class="checkbox-opt-in-text custom-control-label" data-toggle="collapse" href="#billing-address" aria-expanded="false" aria-controls="billingAddress"><p class="pl-1 pt-1 pb-2 text-light">Billing address is the same as the registration address</p> </label>
+                </div>
+                <!-- / BILLIN ADDRESS CHECKBOX -->
+
+
+                <!-- BILLING ADDRESS -->
+                <div id="billing-address" class="billing-address collapse">
+                  <section class="payment-information-billing-address">
+                    <div class="form-row">
+                      <div class="col-lg-12">
+                        <div class="form-group">
+                          <label for="address1">Street Address</label>
+                          <input class="form-control registria_field" id="address1" name="user[address_attributes][address1]" placeholder="Enter a location" type="text" required="">
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="form-group">
+                          <label for="city">City</label>
+                          <input class="form-control registria_field" id="city" name="user[address_attributes][city]" type="text" required="">
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="form-group">
+                          <label for="state">State</label>
+                          <input class="form-control registria_field autocomplete-state" id="state" name="user[address_attributes][state]" autocomplete="off" type="text" required="">
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="form-group">
+                          <label for="zip">ZIP Code
+                          </label> <input class="form-control registria_field" id="zip" name="user[address_attributes][zip]" type="tel" required="">
+                          <input class="form-control registria_field" id="country" name="user[address_attributes][country]" type="hidden" value="United States">
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <h3 class="section-header">Card Information</h3>
+                </div>
+                <!-- / BILLING ADDRESS -->
+
+                <!-- CARD NUMBER -->
+                <div class="form-row">
+                  <div class="col-12">
+                    <div class="form-group">
+                      <label for="number">Card Number</label>
+                      <input class="registria_field form-control rpa-field" id="number" name="order[credit_card][number]" placeholder="Demo - Card will not be processed" type="number">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="col-4">
+                    <div class="form-group">
+                      <label for="selectMonth">Expiration Date</label>
+                      <select class="custom-select" id="selectMonth">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="1">4</option>
+                        <option value="2">5</option>
+                        <option value="3">6</option>
+                        <option value="1">7</option>
+                        <option value="2">8</option>
+                        <option value="3">9</option>
+                        <option value="1">10</option>
+                        <option value="2">1</option>
+                        <option value="3">12</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="form-group">
+                      <label for="selectYear" class="invisible">Expiration Date</label>
+                      <select class="custom-select" id="selectYear">
+                        <option>2019</option>
+                        <option>2020</option>
+                        <option>2021</option>
+                        <option>2022</option>
+                        <option>2023</option>
+                        <option>2024</option>
+                        <option>2025</option>
+                        <option>2026</option>
+                        <option>2027</option>
+                        <option>2028</option>
+                        <option>2029</option>
+                        <option>2030</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="form-group">
+                      <label for="number">CVV</label>
+                      <input class="registria_field form-control rpa-field" id="verification_value" maxlength="4" name="order[credit_card][verification_value]" placeholder="CVV" size="4" type="tel">
+                    </div>
+                  </div>
+                </div>
+                <!-- / CARD NUMBER -->
+
+                <!-- CARD LOGOS -->
+                <div class="card-logos">
+                  <img src="../img/cc_visa.png">
+                  <img src="../img/cc_amex.png">
+                  <img src="../img/cc_mastercard.png">
+                  <img src="../img/cc_discover.png">
+                </div>
+                <!-- / CARD LOGOS -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONFIRM PAYMENT BUTTON-->
+        <div class="row submit-button justify-content-center">
+          <div class="col-lg-6">
+            <a href="confirmation.html" class="btn btn-primary btn-lg btn-block h6">Submit Order</a>
+          </div>
+        </div>
+        <!-- /CONFIRM PAYMENT BUTTON -->
+
+      </main>
+      <!-- / MAIN CONTENT -->
+
+      <!-- FOOTER -->
+      <footer class="row aura-footer">
+        <div class="col-lg-12 text-center">
+          <p class="mb-4 text-center">
+            <a id="privacyPolicy" href="#privacyPolicy" class="text-primary"> Privacy Policy</a>&nbsp; | &nbsp; <a id="termsConditions"  href="#termsConditions" class="text-primary"> Terms &amp; Conditions</a></p>
+					<p class="mb-4 text-center">© 2020 { aura.copyright }. All Rights Reserved.</p>
+            <div
+              class="footer-social-icons d-flex mt-8 mt-md-0 justify-content-center ml-0 ml-md-auto">
+              <a class="social-icon h3 pl-md-2 pl-0 pr-2 pr-md-0 mb-0"
+                href="https://mktg.registria.com/l/399502/2017-10-26/ckldfq" target="_blank"><i
+                  class="fab fa-facebook-square" aria-hidden="true"></i> </a> <a
+                class="social-icon h3 pl-md-2 pl-0 pr-2 pr-md-0 mb-0"
+                href="https://mktg.registria.com/l/399502/2017-10-26/ckldgj" target="_blank"><i
+                  class="fab fa-twitter-square" aria-hidden="true"></i> </a> <a
+                class="social-icon h3 pl-md-2 pl-0 pr-2 pr-md-0 mb-0"
+                href="https://mktg.registria.com/l/399502/2017-09-21/by41fj" target="_blank"><i
+                  class="fab fa-youtube-square" aria-hidden="true"></i> </a> <a
+                class="social-icon h3 pl-md-2 pl-0 pr-2 pr-md-0 mb-0"
+                href="https://mktg.registria.com/l/399502/2017-10-26/ckldgb" target="_blank"><i class="fab fa-linkedin"
+                  aria-hidden="true"></i> </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <div class="custom-footer-html"></div>
+
+    </form>
+    </div>
+    <!-- / CONTAINER-->
+
+		<script src="../scripts/popper.min.js"></script>
+    <script src="../scripts/bootstrap.min.js"></script>
+
+    <script src="../scripts/rivets.js"></script>
+    <script src="../scripts/demo.js"></script>
+    <script>
+      rivets.binders['set-class'] = function(el, value){
+        el.className += ' '+ value;
+      }
+    </script>
+
+  </body>
+</html>
